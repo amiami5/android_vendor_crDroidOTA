@@ -1,0 +1,28 @@
+{
+	"response": [
+		{
+			"maintainer": "amisuke",
+			"oem": "Xiaomi",
+			"device": "Pad 6",
+			"filename": "crDroidAndroid-15.0-20241214-pipa-v11.0-BETA.zip",
+			"download": "https://sourceforge.net/projects/crdroid-pipa/files/pipa/11.x/crDroidAndroid-15.0-20241214-pipa-v11.0-BETA.zip/download",
+			"timestamp": 1734110183,
+			"md5": "ef21ac7d8452d00c260f39a915efa7e0",
+			"sha256": "ae5032d9181f881cca76136ee5ca8b50f7766f8d174889f6a84986668d469cbb",
+			"size": 1338342519,
+			"version": "11.0",
+			"buildtype": "Beta",
+			"forum": "",
+			"gapps": "",
+			"firmware": "",
+			"modem": "",
+			"bootloader": "",
+			"recovery": "",
+			"paypal": "",
+			"telegram": "",
+			"dt": "",
+			"common-dt": "",
+			"kernel": ""
+		}
+	]
+}

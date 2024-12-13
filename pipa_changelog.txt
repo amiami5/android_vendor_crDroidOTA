@@ -1,0 +1,594 @@
+====================
+     12-14-2024
+====================
+
+   * bootable/recovery
+46ff3945 hack: use drm atomic from caf
+
+   * device/xiaomi/pipa
+e63fcdb updaterを自分向ける
+
+   * frameworks/base
+fb839e7f7de8 New Crowdin updates (#1187)
+113f0763fe7e Fix an NPE when a user is added and then removed quickly
+ac6ce9084d35 core: Catch OOB when returning pooled string
+91f86873917c Fix AudioDeviceAttributes null crash
+70f9e4ec98a3 Fix pip enter crash in landscape split-screen pair
+
+   * packages/apps/Dialer
+ad8440bb9 New translations (#138)
+
+   * packages/apps/Launcher3
+112b936c6e New translations (#462)
+e852977c4c Add REGISTER_STATS_PULL_ATOM permission
+9bf887dc3a Hidden & Protected Apps: Make first app fully visible
+
+   * packages/apps/Updater
+61379aa 自分用updater
+
+   * packages/apps/crDroidSettings
+9a2b482 New Crowdin updates (#1206)
+
+====================
+     12-13-2024
+====================
+
+   * packages/apps/Aperture
+bfe57f6 Aperture: Update CameraX to 1.5.0-alpha04
+4b2c584 Aperture: Update media3 to 1.5.0
+ee59719 Aperture: Update gradle-generatebp
+
+   * packages/inputmethods/LatinIME
+eb4a76e25 Fix crash: NPE in SuggestionStripView in LatinIME
+
+   * prebuilts/clang/host/linux-x86/clang-latest
+8909f98 Update prebuilt Clang to r536225 (19.0.1).
+
+====================
+     12-12-2024
+====================
+
+   * frameworks/base
+9e72a5d1f9ff SystemUI: Improve the new biometric prompt layout
+31d2191744f8 fix handling of MATCH_ARCHIVED_PACKAGES flag in getPackageUidInternal()
+6564301c973d Fixes the issue of UDFPS icon background being white when the device is in DOZE_PULSING state
+0436490bc76d LOCKSCREEN->DOZING don't fade out lockscreen
+5fa41c5dab75 Add device entry icon support for OCCLUDED => DOZING transition
+f239880c67c1 Add missing @Nullable to TextUtils.equals()
+25f310b1852f OmniJawsClient: Clean up unnecessary check
+
+   * packages/apps/Camelot
+af530ed Camelot: Make it REUSE compliant
+
+   * packages/apps/Settings
+625071da3cb Ensure udfps enroll view is visible
+766b6882fe5 add App info > Storage > Manage storage button for apps that support it
+b54cc2072eb show current app battery usage mode in summary of App battery usage item
+2e39eb09ced add back Unrestricted battery usage option to App battery usage screen
+fda06b211d9 Settings: Fix face enroll stack overflow
+
+   * packages/apps/Twelve
+1eaf800 Twelve: Add missing CC-BY-SA-4.0 license
+dbdfb01 Twelve: Pass projection as array
+
+====================
+     12-11-2024
+====================
+
+   * device/lineage/atv
+cb695ac atv: Switch to SPDX license identifiers
+
+   * frameworks/native
+70e7e6d387 fix potential leakage issues
+
+   * lineage/scripts
+4e32c3a carriersettings-extractor: Update vendored carrier_list.pb to 20241106
+
+   * packages/apps/Launcher3
+89b83cdb51 Launcher3: Integrate LMOFreeform to system shortcut
+a55f685288 Launcher3: Add recents shortcut for floating window
+186bfd9c37 Revert "Launcher3: Launch apps in freeform mode system shortcut"
+e0bd00b72a Launcher3: Disable native freeform task shortcut
+b10286c003 Launcher3: Remove blur animation on app launch/exit
+
+   * packages/services/OmniJaws
+4f888b0 Revert "OmniJaws: add outline border for widget bg"
+2c5ba1e OmniJaws: Handle system insets
+e21e55c Android.bp: Update libs
+f0a6a88 OmniJaws: Fix crash when service is disabled with widget on homescreen
+4ce00ac OmniJaws: Add widget transparency setting
+
+====================
+     12-10-2024
+====================
+
+   * device/lineage/atv
+1993382 atv: convert to blueprint
+
+   * frameworks/av
+47cb4759b3 Audioflinger: adjust wait time for duplicating thread
+
+   * frameworks/base
+6120dcaea29d wm: Skip freeform displays from forcing desktop mode
+c23e3580fb47 add the lock in toString method.
+
+   * packages/apps/Camelot
+af50977 Camelot: Fix insets once for all
+f676c4b Camelot: Fix FAB padding
+
+   * packages/apps/LMOFreeform
+3b6363e Implement veil resize effect
+3b897f2 Implement material you color scheme
+dd4cddb Rework freeform window design to match desktop mode specs
+
+   * packages/apps/Settings
+f646a9633eb Settings: Backup: Apply insets properly
+b7e01f37a6d Fix incorrect switch status when user stay in NightDisplaySettings page while scheduled night lights on
+
+====================
+     12-09-2024
+====================
+
+   * android
+675fcfc manifest: Track vendor/certification
+
+   * device/lineage/sepolicy
+57d86ee sepolicy: Allow gmscore_app to access system_data_file
+
+   * device/xiaomi/pipa
+2ec0477 固有コードをvendorsetup.shで行うようにした
+
+   * frameworks/av
+071f75bda8 Update mStandby flag in RecordThread
+
+   * frameworks/base
+f1aa00372a7a AttestationService: Fixes and tune up
+aae785539fc4 PixelPropsUtils: Dynamically spoof props for GMS
+2f85fee67eef New Crowdin updates (#1184)
+f9afc3feb108 PixelPropsUtils: Move certified props to vendor
+
+   * hardware/xiaomi
+2724a04 interfaces: com.fingerprints: Add `IFpcFingerprintAuthenticator`
+e0092c9 aidl: fingerprint: Use soong to decide which arch to build
+a8f54b2 aidl: fingerprint: Allow setting more than one sensor location
+b3f3add aidl: fingerprint: Initial Xiaomi implementation
+8b4783a aidl: fingerprint: Initial stub service
+2f8c0f1 fingerprint: Move UDFPS handler and extension out of HIDL
+de75953 vintf: Add IMiSys HAL in compatibility matrix
+c910b5e vintf: Add more hals to fcm
+9f7ecc3 XiaomiEuicc: Don't fatally crash when euicc package is not exists
+4c1b263 XiaomiEuicc: Remove references to EuiccPixel
+a1d0495 XiaomiEuicc: Move to priv-app and grant required permissions
+3ea7d92 XiaomiEuicc: Disable EuiccGoogle when GMS and GSF are not installed
+4989b46 Introduce XiaomiEuicc
+e1bbe90 dolby: translate strings to Russian
+8cfcf27 dolby: Exempt installing package in clone or private space
+532e483 dolby: Fix Building in Andoid 15
+efc8e31 dolby: Add intelligent equalizer setting
+86b39da dolby: Remove deprecated PlainTooltipBox
+4e98984 dolby: Introduce graphical equalizer
+f730582 dolby: Add launcher icon
+483d9cf fixup! dolby: Restore all settings upon bootup
+c4d60ce dolby: Override AudioFx
+586083e dolby: Use all shared resources from devicesettings
+b4f35d2 dolby: Fix build with kotlinc 1.9.0
+7e3c9b6 dolby: Restore current profile _after_ resetting profiles
+8daa60d dolby: Do not set volume leveler amount
+ee491c0 dolby: Restore all settings upon bootup
+84d03cb dolby: Rewrite in Kotlin
+879412e dolby: Revert "Re-enable speaker virtualization after bootup"
+b9759e6 dolby: Convert to SwitchPreferenceCompat
+883a9cf DolbyManager: Migrate to CompoundButton.OnCheckedChangeListener
+dd00dfa dolby: Enable use_resource_processor for all sysui deps
+ddeca1a xiaomi: Introduce Dolby Atmos
+
+   * packages/apps/Aperture
+46749b1 Aperture: Remove aapt_version_code_defaults
+
+   * packages/apps/Camelot
+e48ef23 Camelot: Immersive mode
+cda0318 Camelot: Enable home/back button
+
+   * packages/apps/Glimpse
+7c35a95 Glimpse: Remove aapt_version_code_defaults
+
+   * packages/apps/Recorder
+b205124 Recorder: Remove aapt_version_code_defaults
+
+   * packages/apps/Twelve
+b87c5e1 Twelve: Remove aapt_version_code_defaults
+
+   * packages/apps/crDroidSettings
+42d8342 New Crowdin updates (#1203)
+
+   * vendor/certification
+2374874 certification: Add default/fallback certified props
+d0a4c27 certification: Fix release version prop
+d18cf01 certification: Add initial json
+
+   * vendor/lineage
+4c35d62b crdroid: Include vendor/certification when available
+
+====================
+     12-08-2024
+====================
+
+   * frameworks/base
+46d51e803e91 Allow setting recents key double tap default behavior
+
+   * packages/apps/Camelot
+afb2b91 Camelot: Add app icon
+
+   * packages/apps/Twelve
+f740fa5 Twelve: Add Jellyfin provider
+
+   * vendor/pixel-framework
+3ccdd0a SystemUIGoogle: Check if smartspace is enabled in settings
+
+====================
+     12-07-2024
+====================
+
+   * device/google/atv
+5deb490 products: Add sdk x86_64 TV target
+668b297 Include emu64*/details.mk instead of arch-vendor.mk
+79d3e96 products: Make generic x86_64 TV target incl. 64bit stuff
+
+   * device/xiaomi/pipa
+55ff835 pipa: Update fingerprint to V816.0.12.0.UMZMIXM
+06e4368 pipa: Adjust override prop key names
+
+   * device/xiaomi/sm8250-common
+2e413c0 sm8250-common: Bump up devfreq boost on INTERACTION
+037489d sm8250-common: Restore I/O performance
+147e6b7 sm8250-common: Boost gpu on LAUNCH
+bd9eaf2 sm8250-common: Bump little cluster boost upon INTERACTION
+b952383 sm8250-common: Move runtime cpuset configuration after post_boot completed
+f51122c sm8250-common: Set dex2oat thread count and cpuset
+9d03b6b sm8250-common: Set schedutil rate limit after post_boot completed
+f5d2802 sm8250-common: Enable camera override format from reserved
+4138f50 sm8250-common: Set arch variant to armv8-2a-dotprod
+22d9f2d sm8250-common: Target arm v8.2a and A55
+3569a24 sm8250-common: Enable usage of dex2oat64
+fb1baf8 sm8250-common: display: Disable the property debug.sf.enable_gl_backpressure
+b557b07 sm8250-common: display: Set debug.sf.auto_latch_unsignaled to 0
+0d3c0c4 Revert "sm8250-common: Don't latch unsignal buffers"
+40f8680 sm8250-common: Do not force DCI-P3 on adaptive color mode
+afd6bb4 sm8250-common: Sync extract scripts with 22 templates
+8f3258c sm8250-common: Do not allow foreground tasks to run on CPU7
+
+   * frameworks/base
+e5e76b153d46 fixup! SystemUI: Add proper toggle for smartspace [1/2]
+e4455a5716d5 Fixed a fatal exception which cause IndexOutOfBoundsException.
+
+   * packages/apps/TvSettings
+86241c97f Reapply: Allow disabling Frame Rate settings
+9e19aa694 TvSettings: Check for null HdmiControlManager
+5aadc74d2 TvSettings: Remove unused java file
+7b4d6c9e1 [Realtek][TV][Accessibility] :Check the Shortcut service option, it is on by default, go back to Accessibility and check the Shortcut service again, it is off.
+28ca0b40b Support using USB keyboard to update device name
+a6fd18d5b Fix that when selecting a SlicePreference item by mouse, the corresponding preview page was not loaded properly, resulting in a crash
+67aab15cc Prevent crash on "Manage Keyboards"
+
+====================
+     12-06-2024
+====================
+
+   * device/xiaomi/pipa
+e181eff pipa: peripheralmanager: Fix build
+85d3fcf pipa: peripheralmanager: Set Minimal Default refreshrate to 60
+ee7a2c0 pipa: Move Audio and Camera configs to config folder
+ed6661e pipa: Increase thermal temperature thresholds
+3ac3764 pipa: Import gaming thermal configs
+
+   * device/xiaomi/sm8250-common
+cd32bb2 crdroidandroidのhardware_xiaomiを使うようにした
+
+   * frameworks/av
+1e022ffd2c AudioTrack: Fix setPlaybackRate fail
+
+   * frameworks/base
+3ae541edc048 ATMS: fix the NPE problem in case the dream activity fails to start.
+ab8559018769 udfps: Update touch overlay sensorRect on updating overlay params
+372af2a2cfe5 Make default permissions updates tied to version incremental
+155f03035092 keyguard: Do not trigger a wake up when hiding lockscreen
+c2eb02042437 SystemUI: fix antiquated TunerActivity bugs
+7ec9c93d1aa6 SystemUI: Update groove color
+2855c42bb759 SystemUI: Use groove for brightness slider
+
+   * kernel/xiaomi/sm8250
+03825c99cf Linux 4.19.325
+d3d22f98af sh: intc: Fix use-after-free bug in register_intc_controller()
+7a726a4d78 modpost: remove incorrect code in do_eisa_entry()
+88c0c751c4 9p/xen: fix release of IRQ
+29c147bedc 9p/xen: fix init sequence
+eebe97e3c9 block: return unsigned int from bdev_io_min
+9dc6c9e488 jffs2: fix use of uninitialized variable
+dcd82bb9be ubi: fastmap: Fix duplicate slab cache names while attaching
+af2038a715 ubifs: Correct the total block count by deducting journal reservation
+614783021e rtc: check if __rtc_read_time was successful in rtc_timer_do_work()
+909a8f63cc NFSv4.0: Fix a use-after-free problem in the asynchronous open()
+18f006ec74 um: Fix the return value of elf_core_copy_task_fpregs
+cd39d5a4bb rpmsg: glink: Propagate TX failures in intentless mode as well
+fb7eff0ed2 NFSD: Prevent a potential integer overflow
+251986584f lib: string_helpers: silence snprintf() output truncation warning
+7a00e6bcb9 usb: dwc3: gadget: Fix checking for number of TRBs left
+555032408f media: wl128x: Fix atomicity violation in fmc_send_cmd()
+8fbde29489 HID: wacom: Interpret tilt data from Intuos Pro BT as signed values
+503061df8f block: fix ordering between checking BLK_MQ_S_STOPPED request adding
+bdef114317 arm64: tls: Fix context-switching of tpidrro_el0 when kpti is enabled
+f70f452baa sh: cpuinfo: Fix a warning for CONFIG_CPUMASK_OFFSTACK
+ef5664bc54 um: vector: Do not use drvdata in release
+e80f91b91b serial: 8250: omap: Move pm_runtime_get_sync
+9f5d7f93ca um: net: Do not use drvdata in release
+f1e8a26cc8 um: ubd: Do not use drvdata in release
+26d4cc6296 ubi: wl: Put source PEB into correct list if trying locking LEB failed
+967142af09 spi: Fix acpi deferred irq probe
+1ab8da6956 netfilter: ipset: add missing range check in bitmap_ip_uadt
+510c75dae2 Revert "serial: sh-sci: Clean sci_ports[0] after at earlycon exit"
+f8b44ec9f1 serial: sh-sci: Clean sci_ports[0] after at earlycon exit
+62a1f2435b Revert "usb: gadget: composite: fix OS descriptors w_value logic"
+9c5215c3eb ALSA: usb-audio: Fix potential out-of-bound accesses for Extigy and Mbox devices
+24687847d5 Bluetooth: Fix type of len in rfcomm_sock_getsockopt{,_old}()
+babf44a40c tty: ldsic: fix tty_ldisc_autoload sysctl's proc_handler
+720dd80f36 PCI: Fix use-after-free of slot->bus on hot remove
+74c1daf28d ASoC: codecs: Fix atomicity violation in snd_soc_component_get_drvdata()
+df8df176ec jfs: xattr: check invalid xattr size more strictly
+690eb2e3d8 ext4: fix FS_IOC_GETFSMAP handling
+a287f7cc3a ext4: supress data-race warnings in ext4_free_inodes_{count,set}()
+0ef7ee158f usb: ehci-spear: fix call balance of sehci clk handling routines
+0a729c7b07 apparmor: fix 'Do simple duplicate message elimination'
+02f5aae9a8 misc: apds990x: Fix missing pm_runtime_disable()
+2d7eec7296 USB: chaoskey: Fix possible deadlock chaoskey_list_lock
+70237af4c1 USB: chaoskey: fail open after removal
+14faba5074 usb: using mutex lock and supporting O_NONBLOCK flag in iowarrior_read()
+98517a6f80 net: stmmac: dwmac-socfpga: Set RX watchdog interrupt as broken
+9dfaabb2f1 marvell: pxa168_eth: fix call balance of pep->clk handling routines
+199893ac28 net: usb: lan78xx: Fix refcounting and autosuspend on invalid WoL configuration
+0f3d266fe2 tg3: Set coherent DMA mask bits to 31 for BCM57766 chipsets
+7ed1fa92cf net: usb: lan78xx: Fix memory leak on device unplug by freeing PHY device
+b1567ac4f7 power: supply: core: Remove might_sleep() from power_supply_put()
+2239e08266 vfio/pci: Properly hide first-in-list PCIe extended capability
+0bd21ea81e NFSD: Cap the number of bytes copied by nfs4_reset_recoverydir()
+64ebe832d9 NFSD: Prevent NULL dereference in nfsd4_process_cb_update()
+9a6cd64151 m68k: coldfire/device.c: only build FEC when HW macros are defined
+9e0f5c1924 m68k: mcfgpio: Fix incorrect register offset for CONFIG_M5441x
+0e542fd4ba PCI: cpqphp: Fix PCIBIOS_* return value confusion
+dc39cb9915 PCI: cpqphp: Use PCI_POSSIBLE_ERROR() to check config reads
+b29c823f83 perf probe: Correct demangled symbols in C++ program
+73a3954691 clk: clk-axi-clkgen: make sure to enable the AXI bus clock
+39ad1263af clk: axi-clkgen: use devm_platform_ioremap_resource() short-hand
+8429d1e8d0 fbdev: sh7760fb: Fix a possible memory leak in sh7760fb_alloc_mem()
+4fa58302fb fbdev/sh7760fb: Alloc DMA memory from hardware device
+fdeacff595 powerpc/sstep: make emulate_vsx_load and emulate_vsx_store static
+9d6be0352a ocfs2: fix uninitialized value in ocfs2_file_read_iter()
+3b4e32b110 scsi: qedi: Fix a possible memory leak in qedi_alloc_and_init_sb()
+7b3adba816 scsi: fusion: Remove unused variable 'rc'
+629727c75b scsi: bfa: Fix use-after-free in bfad_im_module_exit()
+bd1f115bbb mfd: rt5033: Fix missing regmap_del_irq_chip()
+e27e6814dd RDMA/bnxt_re: Check cqe flags to know imm_data vs inv_irkey
+ed0c5d0199 mtd: rawnand: atmel: Fix possible memory leak
+ae3f0418af cpufreq: loongson2: Unregister platform_driver on failure
+39aca9ae76 mfd: da9052-spi: Change read-mask to write-mask
+a078e62188 powerpc/vdso: Flag VDSO64 entry points as functions
+93799191c6 trace/trace_event_perf: remove duplicate samples on the first tracepoint event
+dbabd491f8 netpoll: Use rcu_access_pointer() in netpoll_poll_lock
+c08c1cad74 ALSA: 6fire: Release resources at card release
+c23bffe36a ALSA: caiaq: Use snd_card_free_when_closed() at disconnection
+6a04a24f40 ALSA: us122l: Use snd_card_free_when_closed() at disconnection
+7e640b9db2 net: rfkill: gpio: Add check for clk_enable()
+e8a9185391 drm/etnaviv: hold GPU lock across perfmon sampling
+c6d993f9f7 drm/etnaviv: fix power register offset on GC300
+7a1eed9ad6 drm/etnaviv: dump: fix sparse warnings
+e2357b31c6 drm/etnaviv: consolidate hardware fence handling in etnaviv_gpu
+7665a52806 wifi: mwifiex: Fix memcpy() field-spanning write warning in mwifiex_config_scan()
+cb5b13ce39 bpf: Fix the xdp_adjust_tail sample prog issue
+b5b2efe2d2 drm/omap: Fix locking in omap_gem_new_dmabuf()
+99fe2557bc wifi: ath9k: add range check for conn_rsp_epid in htc_connect_service()
+939f056e18 drm/mm: Mark drm_mm_interval_tree*() functions with __maybe_unused
+d8b62ba287 firmware: arm_scpi: Check the DVFS OPP count returned by the firmware
+24470a041b regmap: irq: Set lockdep class for hierarchical IRQ domains
+8aa1e52227 ARM: dts: cubieboard4: Fix DCDC5 regulator constraints
+09b8a4f35d mmc: mmc_spi: drop buggy snprintf()
+d655f21029 soc: qcom: geni-se: fix array underflow in geni_se_clk_tbl_get()
+87e2eee15b time: Fix references to _msecs_to_jiffies() handling of values
+7a46a12704 crypto: cavium - Fix an error handling path in cpt_ucode_load_fw()
+7a84eb0459 crypto: bcm - add error check in the ahash_hmac_init function
+8ad2ef914e crypto: cavium - Fix the if condition to exit loop after timeout
+b408b12509 crypto: pcrypt - Call crypto layer directly when padata_do_parallel() return -EBUSY
+140df3276a EDAC/fsl_ddr: Fix bad bit shift operations
+626d593ebe hfsplus: don't query the device logical block size multiple times
+59b4febd3b s390/syscalls: Avoid creation of arch/arch/ directory
+d696ab6fd8 acpi/arm64: Adjust error handling procedure in gtdt_parse_timer_block()
+220725bb7c m68k: mvme147: Reinstate early console
+657428a04b m68k: mvme16x: Add and use "mvme16x.h"
+34937c01e4 m68k: mvme147: Fix SCSI controller IRQ numbers
+bf64fd1cf4 initramfs: avoid filename buffer overrun
+97a5e00d96 nvme: fix metadata handling in nvme-passthrough
+bd113236f0 proc/softirqs: replace seq_printf with seq_put_decimal_ull_width
+30fb72d0d9 net: usb: qmi_wwan: add Quectel RG650V
+f06b275413 x86/amd_nb: Fix compile-testing without CONFIG_AMD_NB
+6f197f18b0 selftests/watchdog-test: Fix system accidentally reset after watchdog-test
+92bdcabcfc mac80211: fix user-power when emulating chanctx
+2da38bac48 ASoC: Intel: bytcr_rt5640: Add DMI quirk for Vexia Edu Atla 10 tablet
+4738bbd882 mm: revert "mm: shmem: fix data-race in shmem_getattr()"
+70eb25d72b kbuild: Use uname for LINUX_COMPILE_HOST detection
+930e7a6e36 media: dvbdev: fix the logic when DVB_DYNAMIC_MINORS is not set
+c883ef6859 Revert "mmc: dw_mmc: Fix IDMAC operation with pages bigger than 4K"
+ffd4262a9a nilfs2: fix null-ptr-deref in block_dirty_buffer tracepoint
+7b13d32eeb ocfs2: fix UBSAN warning in ocfs2_verify_volume()
+50a44ffb7c nilfs2: fix null-ptr-deref in block_touch_buffer tracepoint
+57c9bc5b5c ocfs2: uncache inode which has failed entering the group
+126812d93a netlink: terminate outstanding dump on socket close
+
+   * packages/apps/Settings
+eb89a1f37e9 Settings: Expose clipboard auto clear setting [2/3]
+
+   * packages/modules/Wifi
+4440354134 wifi: Fix NPE when getBridgedApInstances return null
+441caa827c Use a temporary string to format the ScanResult capabilities.
+551d07ed64 Fix cipher suite type match issue
+0295e72d1d Fix the deadlock issue
+d2fe1d70c2 Bssid should be not null to add current candidate
+1b569c4b7c Set WifiInfo networkId in supplicant scanning state
+34ef693a79 Fix anonymousIdentity empty check and update to app set value
+cc3135f14c Delay unpin cellular data
+6fff498cd9 Protect against null Binder call
+e713e78196 Rework wrong password detection logic
+f14e635a31 Fix endless loop connecting to fallback SSID when network isn't found
+0b4407b439 wifi: Fix no country code update if fail to set it before
+f0c44c47bb Fix the issue of scan settings preferred channels being reset
+a7c60569e8 Wait for upcoming iface during downgrade
+
+====================
+     12-05-2024
+====================
+
+   * android
+30fcac2 manifest: Track libjpeg-turbo
+fb6dc6f Merge 'lineage-22.0' into 15.0
+e4efa33 manifest: Track camelot
+
+   * art
+82a6e52ebb Speed up `AppendPrettyDescriptor()`.
+
+   * device/lineage/atv
+7307162 atv: Don't include scaling rc by hand
+
+   * frameworks/av
+ff1294f815 Destroy output tracks when existing.
+
+   * frameworks/base
+a34fef466883 Settings: Expose clipboard auto clear setting [1/3]
+c89d301bf915 Fix DnsEvent ArrayIndexOutOfBound error
+177a98b94dde Fix the wallpaper not hiding immediately
+
+   * hardware/qcom-caf/common
+91d6de0 qcom: Add soong config for libgrallocutils
+
+   * hardware/qcom-caf/sm8250/display
+5f3dd0bf2e Convert libgrallocutils and gpu_tonemapper to blueprint
+
+   * lineage-sdk
+2396c00f ChargingControl: Prevent crash against very frequent power toggle
+
+   * packages/apps/Camelot
+f7b0fa0 Camelot: Fix double fd close while printing
+cd8e23c Camelot: Add filename to download action
+4f84bb1 Camelot: Apply bottom inset marging to edit fab as well
+1b3299d Camelot: Use filename for print job name if available
+de05561 Camelot: Pass URI to CamelotPdfDocumentAdapter
+4ed966b Revert "Camelot: Use setDataAndType for send action"
+70571f5 Camelot: Reformat code
+d4e8aee Camelot: Show file name on toolbar
+7d4bf50 Camelot: Reorganize Gradle version catalog
+29cbc5c Camelot: Abstract away documentUri
+3ad9929 Camelot: Use setDataAndType for send action
+3cb12c7 Camelot: Use kotlin.cast
+fb630f3 Camelot: Add print action
+05ba3b1 Camelot: Activity title is set from manifest
+f58b03f Camelot: Little code cleanup
+c7e8610 Camelot: Set activity title rather than just toolbar
+3ba6668 Camelot: Add more actions
+d863f27 Camelot: Handle open with action
+a97ae84 Camelot: Allow only local scheme
+f316c0f Camelot: Use RequiresExtension instead of lint suppression
+6e620ff Camelot: Add stub menu actions
+60737c6 Camelot: Use view from setOnApplyWindowInsetsListener() callback
+ca207bf Camelot: Use com.google.android.material@1.11.0
+7ed544e Revert "Camelot: Exclude from recents"
+e0d043e Camelot: Import .github from Twelve
+da01ff8 Camelot: Let scroll view handle insets
+f1dca0c Camelot: Exclude from recents
+ad1b57d Camelot: Follow dynamic colors
+9077b02 Camelot: Remove unused resources
+61efb8e Camelot: Update Gradle wrapper and AGP
+0ba7402 Camelot: Remove IDEA files
+799d1f1 Camelot: enable OnBackInvokedCallback
+35108cf Camelot: Use FragmentContainerView
+6d14efc Camelot: Remove backup rules
+6467b47 Camelot: Enable text search
+dc055eb Camelot: Load PDF
+c0f2bb4 Camelot: Add application/pdf intent filter
+7ea3696 Camelot: Add initial skeleton
+
+   * packages/apps/EmergencyInfo
+fa2065d EmergencyInfo: Apply insets
+
+   * packages/apps/Etar
+aabbad2a DynamicTheme: Setup theme and activites for edge to edge support
+
+   * packages/apps/Settings
+c63f01fec5e Revert "Settings: Expose clipboard auto clear setting [1/2]"
+
+   * packages/apps/crDroidSettings
+c98ca2c Settings: Expose clipboard auto clear setting [3/3]
+c6d6a61 Revert "crDroid: Expose clipboard auto clear setting [2/2]"
+c5a09c3 Revert "crDroid: fixup! Expose clipboard auto clear setting [2/2]"
+
+   * packages/inputmethods/LatinIME
+5277f8917 LatinIME: Fix Implicit PendingIntent Vulnerability
+5df0ff52a LatinIME: Default to Material You theme
+b32d52d2e LatinIME: Add libjni_latinimegoogle for swype
+38f752a9e LatinIME: Fix NPE in KeyboardTheme
+8e6b955ce LatinIME: Correct SDK versions
+69f82419f Fix bug: AOSP keyboard is shown incompletely in Android V landscape mode
+a73d18eba LatinIME: Bump gradle compileSdk to 35
+
+   * tools/extract-utils
+9d6037e extract_utils: add support for EXTRACT_ONLY flag
+d1de2e8 extract_utils: simplify package / copy logic
+27c8331 extract_utils: simplify MAKE_COPY_RULE_ONLY check
+
+   * vendor/lineage
+b9cfa166 crdroid: Build LMO Freeform app and sidebar
+2a0a20d9 common: Inherit pixel-fw when available
+0a9fdd86 crdroid: Disable memtag for different processes
+33af8371 createjson.sh: set proper url for cr11
+18234af5 overlay: update configs for AiAi
+50698533 crdroid: Tag it as BETA
+e010bfc2 crdroid: Execute changelog script once at a time
+c81a5ebd crdroid: Add changelog script
+078372fa crdroid: Generate OTA json at build time
+b979e318 crdroid: Move face unlock biometric permission to system_ext
+73d235fe overlay: Use google-sans for font config overlays
+e08ef240 overlay: Update device configs global overrides
+1c8088c0 crdroid: Adding an option to build DeviceAsWebcam
+38673a16 crdroid: Switch to AOSPA's face unlock implementation
+ffc93ae6 config: Optimize Launcher3 and Settings for speed
+52bb0554 overlay: Add gms location history to extra location packages
+bb45b418 overlay: Add tethering to location exemption
+d1e10c82 overlay: Add SystemUI to location extra packages
+820a8cf1 overlay: Add OmniJaws to location extra packages
+e86537b9 overlay: Offload WM shell to another thread
+58083e88 overlay: Update SettingsProvider defaults
+aca15154 crdroid: Build GameSpace
+c591cdd8 crdroid: Build OmniJaws service
+c3983b3d soong: Add CAMERA_NEEDS_CLIENT_INFO_LIB{_OPLUS}
+20234d7c soong: Add support to set vendor tag with client package name
+df1f1136 crdroid: Build OmniStyle
+eae46c4e crdroid: Build BatteryStatsViewer
+9c7f02d7 crdroid: Update clone exemption list
+7d377e2c crdroid: Add preinstalled package list to stop auto cloning
+3250a456 overlay: Enable app-cloning feature in Settings
+ddf24576 overlay: Settings: Show memory usage in app info
+1fe5101d device_config: Enable Cloned App
+09e1d556 overlay: Update clock plugin list
+8a4a4633 overlay: Allow new SystemUI clocks
+5df36d9e overlay: Set AOSP webview as fallback
+43c2e672 crdroid: Enable ThinLTO cache
+849ca2be build: Override host metadata
+04bff1d9 crdroid: Remove packages moved to addons
+de60d463 crdroid: Moved bootanimation to addons
+a31230c5 crdroid: Clean up wallpaper overlay
+81739510 crdroid: Remove Trebuchet packages
+f739c4a8 crdroid: Always disable app launch blur
+f1c7711a common: Allow OTA downgrade regardless build type
+46caf910 roomservice: get me some crDroid
+e0e108bb charger: Switch from LineageOS Teal to crDroid Blue
+598c6734 apns: Update mobily APN for prepaid connection
+de70c9e2 Revert "overlay: Default to Seedvault backup transport"
+523b23ba crdroid: Drop custom adb drawable
+32fa2b4e build: Ship as crDroid based on LOS
+2adbe412 common: Build Camelot
+
