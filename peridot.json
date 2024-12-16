@@ -1,0 +1,28 @@
+{
+  "response": [
+    {
+      "maintainer": "amisuke",
+      "oem": "Xiaomi",
+      "device": "POCO F6",
+      "filename": "crDroidAndroid-15.0-20241216-peridot-v11.0.zip",
+      "download": "https://sourceforge.net/projects/crdroid/files/peridot/11.x/crDroidAndroid-15.0-20241216-peridot-v11.0.zip/download",
+      "timestamp": 1734330100,
+      "md5": "7b473d4ca950e3be0f183763b3788852",
+      "sha256": "b1eee876d019b8cc84c7727c972e1ac67451931425d09f9eef6b68668fba935c",
+      "size": 2631776413,
+      "version": "11.0",
+      "buildtype": "Sporadically",
+      "forum": "",
+      "gapps": "https://sourceforge.net/projects/nikgapps/files/Releases/Android-15/12-Dec-2024/",
+      "firmware": "",
+      "modem": "",
+      "bootloader": "",
+      "recovery": "",
+      "paypal": "",
+      "telegram": "",
+      "dt": "https://github.com/amiami5/local_manifests",
+      "common-dt": "",
+      "kernel": ""
+    }
+  ]
+}

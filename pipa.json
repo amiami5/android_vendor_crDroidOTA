@@ -1,28 +1,28 @@
 {
-	"response": [
-		{
-			"maintainer": "amisuke",
-			"oem": "Xiaomi",
-			"device": "Pad 6",
-			"filename": "crDroidAndroid-15.0-20241215-pipa-v11.0-BETA.zip",
-			"download": "https://sourceforge.net/projects/crdroid-pipa/files/pipa/11.x/crDroidAndroid-15.0-20241215-pipa-v11.0-BETA.zip/download",
-			"timestamp": 1734270735,
-			"md5": "072a1aee405ef0863c75148dbf47df99",
-			"sha256": "401f5fdfbb9152ff61fc5f5ddd0d931856b4a72a0185bce520a664a96dde397a",
-			"size": 1338954075,
-			"version": "11.0",
-			"buildtype": "Beta",
-			"forum": "",
-			"gapps": "",
-			"firmware": "",
-			"modem": "",
-			"bootloader": "",
-			"recovery": "",
-			"paypal": "",
-			"telegram": "",
-			"dt": "",
-			"common-dt": "",
-			"kernel": ""
-		}
-	]
+  "response": [
+    {
+      "maintainer": "amisuke",
+      "oem": "Xiaomi",
+      "device": "Pad 6",
+      "filename": "crDroidAndroid-15.0-20241216-pipa-v11.0.zip",
+      "download": "https://sourceforge.net/projects/crdroid-pipa/files/pipa/11.x/crDroidAndroid-15.0-20241216-pipa-v11.0.zip/download",
+      "timestamp": 1734343030,
+      "md5": "3123de663d11f25e927021363c283e8f",
+      "sha256": "a06284ae7b07a2846bcbda788bb480b7cb0a06479af52c9dbb01aede3d34521d",
+      "size": 1338972596,
+      "version": "11.0",
+      "buildtype": "Sporadically",
+      "forum": "",
+      "gapps": "https://sourceforge.net/projects/nikgapps/files/Releases/Android-15/12-Dec-2024/",
+      "firmware": "",
+      "modem": "",
+      "bootloader": "",
+      "recovery": "https://sourceforge.net/projects/crdroid-pipa/files/pipa/11.x/recovery/",
+      "paypal": "",
+      "telegram": "",
+      "dt": "https://github.com/amiami5/local_manifests",
+      "common-dt": "",
+      "kernel": ""
+    }
+  ]
 }
