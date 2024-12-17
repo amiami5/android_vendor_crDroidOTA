@@ -1,0 +1,6 @@
+*このページはアップデーターによる更新通知がなされた場合のみ更新されます。
+*This digest is updated only when notified by updater.
+
+-20241216
+crDroid v11.0が正式版になりました（つまりbetaがとれました）
+crDroid v11.0 is now official (i.e. No longer in beta version)
