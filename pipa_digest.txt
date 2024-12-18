@@ -1,5 +1,10 @@
-*このページはアップデーターによる更新通知がなされた場合のみ更新されます。
-*This digest is updated only when notified by updater.
+*このページは原則としてアップデーターによる更新通知がなされた場合のみ更新されます。
+*As a general rule, this digest will be updated only when an update notification is given by the updater.
+
+
+-20241218
+wslの仮想ディスクが爆散したのでkernelのビルド番号が初期化されました
+The kernel build number was initialized because the wsl virtual disk blew up.
 
 -20241216
 crDroid v11.0が正式版になりました（つまりbetaがとれました）
