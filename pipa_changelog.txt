@@ -1,26 +1,84 @@
 ====================
-     12-21-2024
+     12-25-2024
 ====================
 
    * bootable/recovery
-1b8bd370 hack: use drm atomic from caf
+1111a168 hack: use drm atomic from caf
+
+   * device/xiaomi/pipa
+d31571d pipa: Enable 4K video recording on back camera
+67910fb pipa: peripheralmanager: Translate into Ukranian
+
+   * device/xiaomi/sm8250-common
+988a575 sm8250-common: parts: Translate parts into Ukranian
+
+   * frameworks/base
+ba41231dcd77 PixelPropsUtils: Update spoof for PUBG and Tencent Games (#1193)
+
+   * packages/apps/Updater
+6ed76de 自分用updater
+
+====================
+     12-24-2024
+====================
+
+   * frameworks/av
+54ee674b8b Fix Integer Overflow in WebmWriter
+
+   * frameworks/base
+3500ac3f66ed PackageWatchdog: fix the double close issue.
+
+   * vendor/certification
+36db017 certification: Update to latest lynx_beta (#1)
+
+====================
+     12-23-2024
+====================
+
+   * frameworks/base
+bceae0a7e4ab New Crowdin updates (#1190)
+
+   * packages/apps/Launcher3
+dfc3d9b658 New Crowdin updates (#465)
+
+   * packages/apps/crDroidSettings
+f186a7c New Crowdin updates (#1208)
+
+====================
+     12-22-2024
+====================
+
+   * external/chromium-webview/prebuilt/arm
+2b6b7b9 Update Chromium Webview arm prebuilt to 131.0.6778.200
+
+   * external/chromium-webview/prebuilt/arm64
+ade1035 Update Chromium Webview arm64 prebuilt to 131.0.6778.200
+
+   * external/chromium-webview/prebuilt/x86
+56aea9f Update Chromium Webview x86 prebuilt to 131.0.6778.200
+
+   * external/chromium-webview/prebuilt/x86_64
+f690caf Update Chromium Webview x86_64 prebuilt to 131.0.6778.200
+
+====================
+     12-21-2024
+====================
+
+   * external/chromium-webview/patches
+b7fc13e Update Chromium Webview to 131.0.6778.200
+
+   * frameworks/base
+090207422e1a PowerStatsLogger: ensure the opend stream is closed when IOException happen.
 
    * kernel/xiaomi/sm8250
 c28c1679e16c drivers: power: pipa: Fix misleading indentation
 57da89c099aa arm64: configs: pipa: Disable ir spi driver
 
-   * packages/apps/Updater
-9ebd92c 自分用updater
+   * lineage/scripts
+6bdd316 build-webview: Update default webview to 131.0.6778.200
 
 ====================
      12-20-2024
-====================
-
-   * frameworks/base
-090207422e1a PowerStatsLogger: ensure the opend stream is closed when IOException happen.
-
-====================
-     12-19-2024
 ====================
 
    * frameworks/base
@@ -31,25 +89,29 @@ c28c1679e16c drivers: power: pipa: Fix misleading indentation
 776444b0f3c Fix the NPE in the tryToFetchUsageData() method
 
 ====================
+     12-19-2024
+====================
+
+====================
      12-18-2024
 ====================
 
    * frameworks/base
 728f98b1991a UdfpsController: add LAUNCH boost
+25378fb12491 RecentTasks:fix NPE problem to avoid system_server process crash.
+cdabc3b62f5c JobConcurrencyManager: fix the NPE problem.
+
+   * packages/apps/Settings
+9dc5ef144a9 Settings: SoftAp: add Hidden SSID preference
+4234b43d6f7 Settings: SoftAp: add support for setting shutdown timeout
+681581afcd7 Settings: SoftAP: Add client manager
 
 ====================
      12-17-2024
 ====================
 
    * frameworks/base
-25378fb12491 RecentTasks:fix NPE problem to avoid system_server process crash.
-cdabc3b62f5c JobConcurrencyManager: fix the NPE problem.
 d3dcfccbf266 Allow spoofing signingInfo for microG Companion/Services
-
-   * packages/apps/Settings
-9dc5ef144a9 Settings: SoftAp: add Hidden SSID preference
-4234b43d6f7 Settings: SoftAp: add support for setting shutdown timeout
-681581afcd7 Settings: SoftAP: Add client manager
 
 ====================
      12-16-2024
@@ -1089,81 +1151,4 @@ b50f3532 build: Ship as crDroid based on LOS
 
    * vendor/xiaomi/sm8250-common
 ee91f7f sm8250-common: Remove unedded blobs
-
-====================
-     12-15-2024
-====================
-
-   * android
-72d8a46 manifest: Track build/bazel
-
-   * build/bazel
-a4b299ef bazel: dev-keys -> release-keys
-
-   * device/xiaomi/pipa
-8af87b4 updaterを自分向ける
-
-   * packages/apps/Launcher3
-2932a3bdfe Launcher3: Add ZRAM info on recents RAM overview
-
-   * packages/apps/crDroidSettings
-e07f25a crdroid: Remove island notifications
-
-   * vendor/certification
-e7720dc certification: Update overlay
-729d12b gms_certified_props: update to latest tokay_beta
-
-   * vendor/pixel-framework
-9a5e535 SystemUIGoogle: Update CentralSurfacesGoogle
-
-====================
-     12-14-2024
-====================
-
-   * packages/apps/Dialer
-ad8440bb9 New translations (#138)
-
-   * packages/apps/Launcher3
-112b936c6e New translations (#462)
-
-   * packages/apps/crDroidSettings
-9a2b482 New Crowdin updates (#1206)
-
-====================
-     12-13-2024
-====================
-
-   * packages/apps/Launcher3
-e852977c4c Add REGISTER_STATS_PULL_ATOM permission
-9bf887dc3a Hidden & Protected Apps: Make first app fully visible
-
-   * vendor/lineage
-4dafa484 apns: Remove defunct "Eagle Mobile" carrier.
-
-====================
-     12-12-2024
-====================
-
-   * frameworks/native
-f55e20ec1d SF: Fix opportunistic idling and make it more aggressive
-482acb291a SF: Scheduler: set an expiration for heuristic layer's high refresh rate usages
-6f7f3e5c2c SF: Scheduler: touch boost whenever possible
-bfd3097201 SF: Scheduler: opportunistically enter idle after touch
-357abe9e99 SF: Scheduler: relax measurements for heuristic mode
-376a516ec7 SF: Scheduler: remove presentTime check in calculateAverageFrameTime()
-c4179398db SF: Scheduler: maintain current refresh rate if no layers are detected
-
-   * packages/apps/Aperture
-bfe57f6 Aperture: Update CameraX to 1.5.0-alpha04
-4b2c584 Aperture: Update media3 to 1.5.0
-ee59719 Aperture: Update gradle-generatebp
-
-   * packages/inputmethods/LatinIME
-eb4a76e25 Fix crash: NPE in SuggestionStripView in LatinIME
-
-   * prebuilts/clang/host/linux-x86/clang-latest
-8909f98 Update prebuilt Clang to r536225 (19.0.1).
-
-   * vendor/lineage
-ed831e45 apns: Remove defunct Albanian carrier
 
