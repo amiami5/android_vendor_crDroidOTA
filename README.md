@@ -12,5 +12,5 @@ ROMs will be uploaded once booting has been confirmed. I will not perform the sa
 4. 私が中程度以上の不具合もしくは脆弱性の修正がなされたと思う時のみに、updaterによる更新通知があります。それ以外では通知をする予定はありません。  
 An update notification will be issued by the updater solely when I have assessed that a moderate or severe defect or vulnerability has been remediated.  
 
-5. このROMを使用したことによる損害に対する保証は一切受け付けません。保証がほしいのなら公式がxiaomiが提供しているROMを使うべきです。  
+5. このROMを使用したことによる損害に対する保証は一切受け付けません。保証がほしいのならxiaomiが提供しているROMを使うべきです。  
 Please note that we cannot provide any warranty coverage for damages resulting from the use of this unofficial ROM. For warranty considerations, we recommend using the official ROM provided by Xiaomi.
