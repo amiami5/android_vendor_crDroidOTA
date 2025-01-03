@@ -1,6 +1,17 @@
 *このページは原則としてアップデーターによる更新通知がなされた場合のみ更新されます。
 *As a general rule, this digest will be updated only when an update notification is given by the updater.
 
+- 20250103
+11.1で枝葉分かれしたsm8250-commonをlineageOS-22.1の偉い人が公表しているサンプルコード準拠にしました。
+長いものにまかれろです。枝葉分かれして地獄を見るのは私です。経験則上わかってます。痛いほど自覚してます。
+tabletなのにsim関連の設定やらエラーが出るのは調査中です。多分私の責任ではない気もしてます。
+実用上の支障は全く無いので修正の優先順位としては下の方から数えたほうが早いです。
+
+I made sm8250-common compliant with the sample code published by the bigwigs of lineageOS-22.1.
+I'm currently investigating why there are errors with SIM-related settings even though it's a tablet.
+I don't think it's probably a mistake in my configuration.
+Since there is no practical problem, the priority for fixing this is low.
+
 - 20250101
 あけましたおめでとうございます。
 v11.1-BETA。セキュリティパッチ2024-12-05です。A15-QPR1と呼ばれるもののようです。
