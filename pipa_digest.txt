@@ -1,7 +1,23 @@
-*このページは原則としてアップデーターによる更新通知がなされた場合のみ更新されます。
-*As a general rule, this digest will be updated only when an update notification is given by the updater.
+*このページは軽微な更新では更新されません。従来の基準ではアップデータによる通知が一切できないと判明したので変えました。
+*This page will not be updated for minor updates.
 
-- 20250103
+
+- Early-adopter/20250105
+** 旧バージョンに戻す場合はデータの消去が必要となりますのでバックアップは必ずとってください **
+vendorをOS1.0.15.0.UMZMIXM(global版)に更新しました。
+ベンダーセキュリティパッチが2024-12-01になりました。
+FWの変更も入っているようなので人柱版です。問題ないようならBETAバージョンにマージしていきます。
+いつも通り、起動を確認してタッチペンとネトフリが起動することは確認済みです。
+
+** If you want to revert to the previous version, you will need to erase all your data, so be sure to back it up **
+The vendor has been updated to OS1.0.15.0.UMZMIXM (global version).
+The vendor security patch is now 2024-12-01.
+It seems that the firmware has also been changed, so this is a Early-adopter version. 
+If there are no problems, I will merge it into the BETA version.
+I checked the startup as usual and confirmed that the stylus and Netflix started up.
+
+
+- BETA/20250103
 11.1で枝葉分かれしたsm8250-commonをlineageOS-22.1の偉い人が公表しているサンプルコード準拠にしました。
 長いものにまかれろです。枝葉分かれして地獄を見るのは私です。経験則上わかってます。痛いほど自覚してます。
 tabletなのにsim関連の設定やらエラーが出るのは調査中です。多分私の責任ではない気もしてます。
@@ -12,7 +28,8 @@ I'm currently investigating why there are errors with SIM-related settings even 
 I don't think it's probably a mistake in my configuration.
 Since there is no practical problem, the priority for fixing this is low.
 
-- 20250101
+
+- BETA/20250101
 あけましたおめでとうございます。
 v11.1-BETA。セキュリティパッチ2024-12-05です。A15-QPR1と呼ばれるもののようです。
 BETAの不安定さに加えセキュリティパッチというアメとムチみたいなバージョンですが
