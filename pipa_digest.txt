@@ -2,6 +2,16 @@
 *This page will not be updated for minor updates.
 
 
+- BETA/20250107
+** 旧バージョンに戻す場合はデータの消去が必要となりますのでバックアップは必ずとってください **
+Early-adopter/20250105にビルド時点までの修正を加えたものになります。
+追記：Early-adopterのテストへの参加ありがとうございました。
+
+** If you want to revert to the previous version, you will need to erase all your data, so be sure to back it up **
+This is Early-adopter/20250105 with modifications made up to the time of build.
+P.S.: Thank you to everyone who participated as an Early-adopter.
+
+
 - Early-adopter/20250105
 ** 旧バージョンに戻す場合はデータの消去が必要となりますのでバックアップは必ずとってください **
 vendorをOS1.0.15.0.UMZMIXM(global版)に更新しました。

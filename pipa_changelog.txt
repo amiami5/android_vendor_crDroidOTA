@@ -1,21 +1,269 @@
 ====================
-     01-05-2025
+     01-08-2025
 ====================
 
+   * android
+b639ab7 Merge 'lineage-22.1' into 15.0
+
    * bootable/recovery
-5712e593 hack: use drm atomic from caf
+56c94cfb hack: use drm atomic from caf
+
+   * device/xiaomi/sm8250-common
+4cec95d V816.0.15.0.UMZMIXM
+
+   * frameworks/base
+704b3dc0faa9 base: Add option to cycle through ringer modes [1/3]
+6462e464a3d7 InstallPackageHelper: fiX the NPE problem.
+b09e8ff93818 UidObserverController: Protect mValidateUids with mLock
+d7d52baa422e TaskDisplayArea: fix NPE problem.
+
+   * hardware/qcom-caf/common
+5807122 common: Extend list of prebuilt interfaces
+
+   * hardware/qcom-caf/sm8150/display
+c7b645a5 gralloc: Fix RAW10/12 buffer alignment for trinket
+aba878c3 sdm: core: allow to skip refresh rate changes
+d5ad603f display-product: Update display configs path for AOSP configuration
+420f36de Revert "gralloc: Fix issue with mmap/munmap meta due to reserved size"
+fe1a238f gralloc: Bump allocator priority to 100.
+602321eb gralloc: Use foreground cpuset/uclamp
+b6c9942d sdm: Set SDM event thread to SCHED_RR
+cd8cbaf0 sdm: Set SDM event thread to SCHED_FIFO
+093f0e9b Revert "sdm: Set SDM_EventThread as RealTime task with lowest priority"
+fd4ef747 Revert "Gralloc: Use handle reserved size while importing buffer"
+5e1e513e Merge tag 'LA.UM.9.1.r1-16400-SMxxx0.QSSI14.0' of https://git.codelinaro.org/clo/la/platform/hardware/qcom/display into 15.0-caf-sm8150
+
+   * lineage-sdk
+b9982a36 ChargingControl: Prevent crash against very frequent power toggle
+e2df768b sdk: Add customization for double tap recents key [1/3]
+c55662be lineage-sdk: Allow to customize bottom corner swipe up action [3/4]
+e7596cc0 Add three fingers swipe actions [1/3]
+e28c739d Add restart SystemUI in Advanced Reboot [2/2]
+aa4b7a5b Add On-The-Go Mode to power menu constants
+e8d77e4d Set long press on back default to kill app
+2c6edf24 Add more device key actions
+7949e3e9 NotificationLights: Allow overriding for all apps [1/2]
+5aca0c3b Battery light: 100% charged level (3/3)
+d16eb3c6 Add toggle to allow advanced restart on secured lockscreen[1/2]
+8f567e7f Add settings for brightness slider improvements
+e5e9e0bf Fix settings pref switch for multi-user
+9057d860 Properly set default value for switch pref
+8d287239 Allow value to hide the clock
+3843de54 Allow value 3 for status bar quick pull down
+3736157d Remove setting loading for FORCE_SHOW_NAVBAR
+07ff3522 Bring our icon
+44afc916 Try loading default setting value for switch
+944204c8 Set summary automatically if required
+ebe11433 Replace los versioning
+81752a19 Enable advanced reboot by default
+5b159714 Do not prevent boot on database downgrade
+dfbbb31d Kill trust interface hint on first boot
+0bd0a4da Disable by livedisplay by default
+3ed0c109 Ship as crDroid based on LOS
+
+   * packages/apps/Jelly
+01168fd Jelly: Properly name onCreate argument
+017b0b5 Jelly: s/DEPRECATION/Deprecation
+d65a76e Jelly: MainActivity: add Suppress DEPRECATION for TaskDescription
+c829ddd Jelly: WebClient: remove Suppress DEPRECATION
+4cc1225 Jelly: WebViewExt: remove shouldAllowDownload
+985cc20 Jelly: remove unused parts
+
+   * packages/apps/Launcher3
+5c4e803dbe New Crowdin updates (#470)
+
+   * packages/apps/Messaging
+374d645 Messaging: Replace AOSP illustrations
+
+   * packages/apps/Settings
+7a3e017d635 Settings: gestures: Enable Cycle through ringer modes for all
+477994f9c66 Settings: Add option to cycle through ringer modes [2/3]
+45712c63e08 Fix sim status details not updated after sim hotswap
+cbfb9522f67 Show GSM settings with CDMA phone type
+
+   * packages/apps/Twelve
+c3782fb Twelve: PlaybackService: Refactor custom command handler
+759e375 Twelve: Get audio session via custom commands
+1af5665 Twelve: Add simple audioSessionId getter
+b827ab2 Twelve: Add "play" to MediaItemBottomSheetDialog
+1a1ae6c Twelve: Play audio in activity fragment
+98f8935 Twelve: Handle null genre/album name in activity
+6e62525 Twelve: Add last played and most played albums activity tabs
+a8f8510 Twelve: Track audio stats and last played information
+
+   * packages/apps/Updater
+de898bc 自分用updater
+
+   * packages/apps/crDroidSettings
+0516736 New Crowdin updates (#1210)
+7903903 crdroid: strings: Add option to cycle through ringer modes [3/3]
+
+   * tools/extract-utils
+6314ccf extract_utils: add support for generating dummy shared lib packages
+
+   * vendor/xiaomi/pipa
+e7f1a25 OS1.0.15.0.UMZMIXM
+
+   * vendor/xiaomi/sm8250-common
+beeefb2 OS1.0.15.0.UMZMIXM
+
+====================
+     01-07-2025
+====================
+
+   * android
+e37975a manifest: Stop tracking AOSP sdm845 bluetooth
+ebc2d5c manifest: Stop tracking AOSP sdm845/sm8150 ipacfg-mgr HALs
+a665368 manifest: Stop tracking AOSP sdm845/sm8150/sm7250 media HALs
+
+   * frameworks/base
+d5529b32af94 fixup! SystemUI: Disable longpress effect for A11 QS tile
+3dfb8efb020c QSLongPressEffect: Provide a fallback for devices with no primitives
+
+   * hardware/lineage/compat
+e13c629 compat: expose android.hardware.sensors@1.0-convert as shared lib
+
+   * hardware/qcom-caf/common
+c89b361 qcom: Set soong configs required by sdm845 libgrallocutils
+dbae08f qcom: Enable gralloc4 on 4.14/4.19 families
+
+   * hardware/qcom/sdm845/display
+ec1f12c8 display: Remove libmemtrack library
+
+   * hardware/qcom/sdm845/gps
+84f4869 Include Android.mk when building B4S4
+645c2f2 Add os_pickup.bp to create namespace
+9e6a59f Add os_pickup.mk to control access to all sdm845 projects
+4f3246a gps: Convert remaining Android.mk to bp
+
+   * hardware/qcom/sm7250/display
+5eb7ffaa display: Remove libmemtrack library
+
+   * hardware/qcom/sm7250/gps
+51da88d gps: Convert remaining Android.mk to bp
+64ab4f0 gps: Remove unused implementations
+
+   * hardware/qcom/sm8150/display
+c9893437 display: Remove libmemtrack library
+
+   * hardware/qcom/sm8150/gps
+035adb9 Include Android.mk when building S5
+3bbbaa5 skip building when BUILD_WITHOUT_VENDOR = true
+1fa7d97 Use PRODUCT_PLATFORM as filter variable
+6551c67 switch sm8150 to msmnile
+24e8813 More googleplex integration - namespaces
+8281dfe gps: Convert remaining Android.mk to bp
+403f99a gps: Remove unused implementations
+
+   * kernel/xiaomi/sm8250
+3dc238a863efd nl80211: add WPA3 definition for SAE authentication
+
+   * packages/apps/Jelly
+58452d5 Jelly: Allow to disable Home Page autoload
+fb3d412 Jelly: add hint for auto complete
+d7d88d7 Jelly: url_bar_layout: hide LinearProgressIndicator by default
+8cc065b Jelly: remove settings.databaseEnabled
+
+   * packages/apps/Twelve
+c289050 Twelve: Reduce default values for bufferForPlaybackMs and bufferForPlaybackAfterRebufferMs
+bd9a3fe Twelve: Update media3 to 1.5.1
+
+   * tools/extract-utils
+d9318ce extract_utils: add logging for unprocessed files
+b3a33cf extract_utils: add type hints for BpBuilder's set() method
+84f4349 extract_utils: remove type hints for BpBuilder methods returning self
+a345b1b extract_utils: remove BpBuilder's get_partition() method
+a39a2bf extract_utils: do not store unused device / common modules
+1280d39 extract_utils: remove add_argument's store explicit default
+62fb085 extract_utils: add types for ExtractUtilsModule device and vendor
+3fbbd99 extract_utils: add types for device_with_common args
+
+====================
+     01-06-2025
+====================
 
    * device/xiaomi/pipa
 f950d7d V816.0.15.0.UMZMIXM
 
-   * device/xiaomi/sm8250-common
-03f1c91 V816.0.15.0.UMZMIXM
-
    * frameworks/base
+4d2925010c30 fixup! Add three fingers swipe actions [2/3]
+0684170247c5 base: Allow disabling private DNS for VPN [1/2]
 f47bbdba0808 SystemUI: SmartspaceSection: Build decoupled views only when required
 2d44bf7a0231 New Crowdin updates (#1190)
 c4dc681a23e0 Update Crowdin configuration file
 e45994964bcd SystemUI: Do initialize long press QS effects when supported
+
+   * hardware/qcom-caf/msm8998/audio
+4bf5f596f5 audio: Remove disabled HW accelerated effects
+669591a334 audio: Remove disabled libhwdepcal
+ebdd145ed7 audio: Remove unsupported QAHW
+37f170ac76 audio: Remove unused hdmi_in_test
+16c0e9a6cb audio: Remove deprecated audio daemon
+
+   * hardware/qcom-caf/sdm845/audio
+a2f05ff1ba audio: Remove disabled HW accelerated effects
+e14c377a89 audio: Remove disabled libhwdepcal
+7563314d7f audio: Remove unsupported QAHW
+96e3baf26f audio: Remove unused hdmi_in_test
+f15cd4864f audio: Remove deprecated audio daemon
+
+   * hardware/qcom-caf/sm8150/audio
+fdc8d176cb audio: Remove disabled HW accelerated effects
+5bf377a2ac audio: Remove disabled libhwdepcal
+657571d507 audio: Remove unsupported QAHW
+533d5aefc5 audio: Remove unused hdmi_in_test
+5cf8cad416 audio: Remove deprecated audio daemon
+
+   * hardware/qcom-caf/sm8250/audio
+5e6764540b audio: Remove disabled HW accelerated effects
+50d27e9069 audio: Remove disabled libhwdepcal
+6141564136 audio: Remove unsupported QAHW
+15ee8739d3 audio: Remove unused hdmi_in_test
+d1cc61abdd audio: Remove deprecated audio daemon
+
+   * hardware/qcom-caf/sm8350/audio
+f52ceb13e1 audio: Remove disabled HW accelerated effects
+bd1e5ef54d audio: Remove disabled libhwdepcal
+3c95901c55 audio: Remove unsupported QAHW
+2cd60c0732 audio: Remove unused hdmi_in_test
+1b849f14f6 audio: Remove deprecated audio daemon
+
+   * hardware/qcom-caf/sm8350/display
+1b7edb3343 Revert "display: Add QMCS image generation"
+7f0b57ca60 libcopybit: C2D deprecation and cleanup
+
+   * hardware/qcom-caf/sm8450/display
+2272048d53 Revert "display: Add QMCS image generation"
+87396a83e4 libcopybit: C2D deprecation and cleanup
+681d93ee51 display: Remove soong subdirs list
+
+   * packages/apps/Jelly
+7db4219 Jelly: Add history suggestion provider
+
+   * packages/apps/Launcher3
+6192820338 Launcher3: Add missing PACKAGE_USAGE_STATS permission
+a7d611099c fixup! Launcher3: Implement private space access when hidden
+4a10e32c62 Launcher3: LoadTrustComponents: Limit app list to only show launchable applications
+a2c36a24ff Launcher3: TrustAppsActivity: Switch to collapsing toolbar
+68b7e0cc7a Revert "Launcher3: Remove blur animation on app launch/exit"
+4f42b1862d Launcher3: WidgetsPredictionUpdateTask: Mitigate an NPE
+
+   * packages/apps/Settings
+dcbde49dcb9 Revert "Settings: Fix loading iconpack-based Wellbeing icon"
+64629df20fa Settings: Allow disabling private DNS for VPN [2/2]
+f033cff0c97 Settings: Export an activity for private DNS settings
+
+   * packages/apps/crDroidSettings
+9510808 crdroid: Add strings for disable Private DNS for VPN
+
+   * packages/services/Telephony
+2eb531453 RadioInfo: Handle system insets
+
+====================
+     01-05-2025
+====================
+
+   * frameworks/base
 d8d500632a93 SystemUI: Disable longpress effect for A11 QS tile
 7e5a898a93bf SystemUI: Disable secondary click on bluetooth tile conditionally
 27b7ed9be4ef SystemUI: Add face unlock icon to keyguard blueprint
@@ -716,59 +964,31 @@ d1a5cd6d7bc4 SmoothSpinners: Makes the loading "spinner" animation smoother
 9e3e9e6e189f base: Pause apps feature
 884956f2b32d base: Add stub files
 
-   * hardware/qcom-caf/msm8998/audio
-4bf5f596f5 audio: Remove disabled HW accelerated effects
-669591a334 audio: Remove disabled libhwdepcal
-ebdd145ed7 audio: Remove unsupported QAHW
-37f170ac76 audio: Remove unused hdmi_in_test
-16c0e9a6cb audio: Remove deprecated audio daemon
+   * hardware/qcom-caf/msm8998/display
+c1592e4fe9 display: Remove deprecated lights.$(TARGET_BOARD_PLATFORM)
+c904f5a63d display: Remove libmemtrack library
+a68e6ec4d0 gralloc: Make MASTER_SIDE_CP as default Making MASTER_SIDE_CP as default
+471c539263 Remove unused libcopybit sources
+e4c7808138 qdutils/hwc: Remove unused code surrounding fps calculations
+bb6b675177 sdm: Remove USE_GRALLOC1 conditionals
+ffb771682b sdm: Remove use_hwc2 conditional
+0e4a4d7a2b sdm: Remove display_config_version conditionals
+4130e77ed8 Revert "hwc2: Avoid adding default color mode when display PP is unsupported"
+57380f3e6c sdm: Cleanup unused code, round 2
+e7af83dbdd display: Cleanup unused code
 
-   * hardware/qcom-caf/sdm845/audio
-a2f05ff1ba audio: Remove disabled HW accelerated effects
-e14c377a89 audio: Remove disabled libhwdepcal
-7563314d7f audio: Remove unsupported QAHW
-96e3baf26f audio: Remove unused hdmi_in_test
-f15cd4864f audio: Remove deprecated audio daemon
-
-   * hardware/qcom-caf/sm8150/audio
-fdc8d176cb audio: Remove disabled HW accelerated effects
-5bf377a2ac audio: Remove disabled libhwdepcal
-657571d507 audio: Remove unsupported QAHW
-533d5aefc5 audio: Remove unused hdmi_in_test
-5cf8cad416 audio: Remove deprecated audio daemon
-
-   * hardware/qcom-caf/sm8250/audio
-5e6764540b audio: Remove disabled HW accelerated effects
-50d27e9069 audio: Remove disabled libhwdepcal
-6141564136 audio: Remove unsupported QAHW
-15ee8739d3 audio: Remove unused hdmi_in_test
-d1cc61abdd audio: Remove deprecated audio daemon
-
-   * hardware/qcom-caf/sm8350/audio
-f52ceb13e1 audio: Remove disabled HW accelerated effects
-bd1e5ef54d audio: Remove disabled libhwdepcal
-3c95901c55 audio: Remove unsupported QAHW
-2cd60c0732 audio: Remove unused hdmi_in_test
-1b849f14f6 audio: Remove deprecated audio daemon
-
-   * hardware/qcom-caf/sm8450/display
-87396a83e4 libcopybit: C2D deprecation and cleanup
-681d93ee51 display: Remove soong subdirs list
-
-   * packages/apps/Jelly
-7db4219 Jelly: Add history suggestion provider
+   * lineage-sdk
+8709a3a5 sdk: Optimize imports
+97ea132c sdk: FloatMath is deprecated
+423cec2b sdk: A few finals don't hurt
+28185f0f sdk: Call Handler()'s correct constructor
+87c96977 sdk: Use BluetoothManager.getAdapter()
 
    * packages/apps/Twelve
 9e77815 Twelve: Bump gradle-generatebp to 1.19
 
-   * packages/apps/Updater
-52e4b9c 自分用updater
-
-   * vendor/xiaomi/pipa
-a93fdd5 OS1.0.15.0.UMZMIXM
-
-   * vendor/xiaomi/sm8250-common
-07aea61 OS1.0.15.0.UMZMIXM
+   * packages/services/Telephony
+4cf0ae6c8 Telephony: Migrate RadioInfo from ScrollView to NestedScrollView
 
 ====================
      01-04-2025
@@ -786,6 +1006,15 @@ abcaa11 sm8250-common: Migrate to QTI USB Gadget AIDL HAL
 2d73103 sm8250-common: Shim widevine with libcrypto_shim
 9b9619f sm8250-common: Shim WFD with libgui_shim/libinput_shim
 
+   * frameworks/base
+8f2b06fb6137 fixup! SystemUI: Fix constraints for keyguard slice view
+
+   * hardware/qcom-caf/sm8150/display
+a894fa1f Convert remaining Android.mk to blueprint
+
+   * packages/apps/Jelly
+eed0375 Jelly: Migrate suggestion provider to flow
+
    * vendor/addons
 29fa7ce addons: adjust A11 style QS tiles padding
 
@@ -798,18 +1027,23 @@ abcaa11 sm8250-common: Migrate to QTI USB Gadget AIDL HAL
 
    * android
 4f39969 Revert "manifest: Track fwb from staging repo"
+821fba9 Fork device/generic/goldfish
+
+   * device/generic/goldfish
+61bfda5b goldfish: Enable DPad on TV
 
    * frameworks/base
-8f2b06fb6137 fixup! SystemUI: Fix constraints for keyguard slice view
 eef5777b2956 Automatic translation import
 
    * packages/apps/Aperture
 e34ee13 Aperture: Remove unused expression
 2e066d2 Aperture: Switch to coil3
 6288db3 Automatic translation import
+f58b1a4 Aperture: Bump gradle-generatebp to 1.17
 
    * packages/apps/Camelot
 5d6aff2 Automatic translation import
+4d3e9e0 Camelot: Bump gradle-generatebp to 1.17
 
    * packages/apps/DeskClock
 a2df29922 Automatic translation import
@@ -832,16 +1066,25 @@ a316375 Glimpse: Default null bucket display name to Build.MODEL
 7a94824 Glimpse: Allow album name to be null
 a30b5a5 Glimpse: Allow media display name to be null
 9b88adb Automatic translation import
+db811f2 Glimpse: Bump gradle-generatebp to 1.17
+a039693 Glimpse: Remove scope from MediaRepository
 
    * packages/apps/Jelly
-eed0375 Jelly: Migrate suggestion provider to flow
 a67ec9d Automatic translation import
+80b212e Jelly: Bump gradle-generatebp to 1.17
+
+   * packages/apps/Recorder
+bc7d609 Recorder: Bump gradle-generatebp to 1.17
 
    * packages/apps/Twelve
 32d8dd8 Automatic translation import
+641f951 Twelve: Handle more possible okhttp exceptions
 
    * packages/providers/DownloadProvider
 8f732ede Automatic translation import
+
+   * tools/extract-utils
+e400cfc extract_utils: fix unslot_partition() for unslotted system_ext
 
    * vendor/crowdin
 0f2cb1c Automatic translation import
@@ -853,44 +1096,14 @@ b9a26c3 Automatic translation import
      01-02-2025
 ====================
 
-   * device/xiaomi/sm8250-common
-3ad575d 11.1
-
-   * packages/apps/Aperture
-f58b1a4 Aperture: Bump gradle-generatebp to 1.17
-
-   * packages/apps/Camelot
-4d3e9e0 Camelot: Bump gradle-generatebp to 1.17
-
-   * packages/apps/Glimpse
-db811f2 Glimpse: Bump gradle-generatebp to 1.17
-a039693 Glimpse: Remove scope from MediaRepository
-d4711b8 Glimpse: Use DefaultSelectionTracker's AdapterDataObserver
-
-   * packages/apps/Jelly
-80b212e Jelly: Bump gradle-generatebp to 1.17
-dd1e705 Jelly: Sync history changed via History API
-c5d1df9 Jelly: Allow to enable dynamic popups
-68f7000 Jelly: Resolve dynamic new tab URLs semi-automatically
-
-   * packages/apps/Recorder
-bc7d609 Recorder: Bump gradle-generatebp to 1.17
-
-   * packages/apps/Twelve
-641f951 Twelve: Handle more possible okhttp exceptions
-
-   * tools/extract-utils
-e400cfc extract_utils: fix unslot_partition() for unslotted system_ext
-
-   * vendor/xiaomi/sm8250-common
-177a116 sm8250-common: Bump libwfdservice to android.media.audio.common.types-V4
-
-====================
-     01-01-2025
-====================
-
    * android
 1476d9d manifest: Untrack few projects
+
+   * device/generic/goldfish
+3591cf9a Allow lineage_sdk_* to use `emu_img_zip`
+
+   * device/xiaomi/sm8250-common
+3ad575d 11.1
 
    * external/arm-optimized-routines
 f32adf7 Merge tag 'android-15.0.0_r6' into 15.0
@@ -902,40 +1115,66 @@ f32adf7 Merge tag 'android-15.0.0_r6' into 15.0
 1a964dc Fix parameter checking logic error in tokenize
 d9b77a9 sqlite: Tune flags according to docs
 
-   * packages/apps/Backgrounds
-d9301e3 Backgrounds: Import wallpapers for crdroid
+   * hardware/qcom-caf/common
+4cfb859 qcom: Only set TARGET_USES_COLOR_METADATA for UM 3.18 family
 
-   * packages/apps/Dialer
-cb7f14aa9 New translations (#138)
-07777e9a6 Update Crowdin configuration file
-15ede3515 callrec: catch exceptions from reset() when releasing MediaRecorder
-8263971d4 callrec: bugfix: file descriptor leak in CallRecorderService
-10f136718 callrec: remove no-op implementations of interfaces of call recording UI
-c08befaa2 callrec: never allow access to call recordings through the FileProvider
-9766bae1c Dialer: Revamp swipes to new functionalities
-bf4fcd2fa Dialer: Introduce swipe to call
-3e6eaf2bb Dialer: Fix statusbar on light theme
-2e676437f Dialer: Properly set navigation bar theme
-88db032bf Dialer: Rework empty illustrations
-5d91347a7 Dialer: Move Sensor settings to Other settings
-b286561eb Dialer: Add toggle for post call snackbar
-5a8cd4c1f Dialer: Add ability to set full screen photos for calls
-6fdbe14d5 InCallUI: SmartMute
-633c1110c Fix NPE in InCallPresenter
-492bcecf5 Fix to show voice mail notification icon for multi-sim
-baf58253e Dialer: Add option to disable proximity sensor
-75aa45b07 Dialer: Enable auto call recording for all
-5c0b0e137 Autostart call recording implementation
-b0bef82e6 Dialer: Make recording names sortable
-8045b6bfd Dialer: Enable call recording for all
+   * hardware/qcom-caf/msm8998/display
+5abd3d8ab4 Convert libgrallocutils and gpu_tonemapper to blueprint
 
-   * packages/apps/DocumentsUI
-f4f11cfb4 DocumentsUI: config: show search bar and disable all caps
-a0c4ec602 Use proper background in dark theme
-8d5f5d206 Add null check for ConfigStore in IconHelper
+   * hardware/qcom-caf/sdm845/display
+cbde3d49c3 display: Remove deprecated lights.$(TARGET_BOARD_PLATFORM)
+4fe8105d20 display: Remove libmemtrack library
+3c741238f2 gralloc: Make MASTER_SIDE_CP as default Making MASTER_SIDE_CP as default
+598df5b1eb Remove unused libcopybit sources
+a150ed1334 sdm: Remove use_hwc2 conditional
+50fc8cb9a4 sdm: Remove display_config_version conditionals
+d2df111e1e Convert libsdmcore to blueprint
+1972b9ecd6 Convert libgrallocutils and gpu_tonemapper to blueprint
+
+   * hardware/qcom-caf/sm8150/display
+7e5cde8c sdm: Convert hwcomposer.qcom to soong
+090df803 Revert "sdm/hwc: add display indices property for client id init"
+d4eb32d3 sdm: Remove use_hwc2 conditional
+82733f3c Convert libsdmcore to blueprint
+c9fa6c3f display: Squashed revert of hypervisor changes
+06b6e3a2 Convert gpu_tonemapper to blueprint
+bc0d05e8 display: Remove deprecated lights.$(TARGET_BOARD_PLATFORM)
+e362df59 Remove unused libcopybit sources
+f47c5448 display: Disable gralloc module
+a4c0a754 display: Remove libmemtrack library
+
+   * hardware/qcom-caf/sm8250/display
+d17dc82eab Revert "composer: add support for display bandwidth limits management"
+7e19d39210 display: Switch to soong
+a908076e04 display: Remove deprecated lights.$(TARGET_BOARD_PLATFORM)
+f3e3cf8219 Remove unused libcopybit sources
+8c96f1a52f display: Drop non existent hwcomposer.$(TARGET_BOARD_PLATFORM)
+19dad5b9a5 display: Disable gralloc module
+d4c94ef160 display: Remove libmemtrack library
+
+   * hardware/qcom-caf/sm8350/display
+95af29b7d1 display: Remove soong subdirs list
+8f2543a4da display: Disable gralloc module
+3d2ccfcc97 display: Remove deprecated lights.$(TARGET_BOARD_PLATFORM)
+822d777fb9 Remove unused libcopybit sources
+87cedbf9e2 display: Drop non existent hwcomposer.$(TARGET_BOARD_PLATFORM)
+d6900a6b72 display: Remove libmemtrack library
+
+   * lineage-sdk
+5e5212c7 sdk: Try getting LineageHardwareService again before checking for it
+
+   * packages/apps/Glimpse
+d4711b8 Glimpse: Use DefaultSelectionTracker's AdapterDataObserver
+
+   * packages/apps/Jelly
+dd1e705 Jelly: Sync history changed via History API
+c5d1df9 Jelly: Allow to enable dynamic popups
+68f7000 Jelly: Resolve dynamic new tab URLs semi-automatically
 
    * packages/apps/Messaging
-e2a4799 Messaging: Replace AOSP illustrations
+278c7e9 Messaging: Hide new chat button when forwarding messages
+66d57e9 Messaging: Handle geo uri scheme
+7f639e3 Messaging: Use MaterialComponents everywhere instead of AppCompat
 
    * packages/apps/ThemePicker
 d89ca1ac Import CustomColorStub from Husky QPR1
@@ -995,15 +1234,70 @@ c0b5e663e Telecomm: Update vibration patterns
 f39ba300b Telecomm: Add vibration patterns from OOS [2/3]
 f31220ff0 Telecomm: Phone ringtone setting for Multi SIM device [3/3]
 
-   * packages/services/Telephony
-be380d11c RadioInfo: Handle system insets
-
    * system/memory/lmkd
 af2d26e lmkd: Ensure node stats are being parsed
 935f84b lmkd: fix handling of EPOLLHUP for pidfd
 34fcc16 lmkd: count the number of times LMKD wakes up
 536daa6 lmkd: Fix first poll of an event occuring sooner than intended.
 8e07f1b lmkd: fix higher event being reset by lower and polling start
+
+   * vendor/xiaomi/sm8250-common
+177a116 sm8250-common: Bump libwfdservice to android.media.audio.common.types-V4
+
+====================
+     01-01-2025
+====================
+
+   * frameworks/base
+ce4a66e18209 fixup! Introduce high touch polling rate feature control
+ef033bb3a47e fixup! Add high touch sensitivity and hovering to InputService
+
+   * hardware/lineage/compat
+dca77d7 Import composer utils from hardware/interfaces
+
+   * lineage/scripts
+8817e8f device-deps-regenerator: Sort ignorelist alphabetically
+9c1f21c device-deps-regenerator: Ignore caimito
+56506ed device-deps-regenerator: Add lineage-22.1 branch
+
+   * packages/apps/Backgrounds
+d9301e3 Backgrounds: Import wallpapers for crdroid
+
+   * packages/apps/Dialer
+cb7f14aa9 New translations (#138)
+07777e9a6 Update Crowdin configuration file
+15ede3515 callrec: catch exceptions from reset() when releasing MediaRecorder
+8263971d4 callrec: bugfix: file descriptor leak in CallRecorderService
+10f136718 callrec: remove no-op implementations of interfaces of call recording UI
+c08befaa2 callrec: never allow access to call recordings through the FileProvider
+9766bae1c Dialer: Revamp swipes to new functionalities
+bf4fcd2fa Dialer: Introduce swipe to call
+3e6eaf2bb Dialer: Fix statusbar on light theme
+2e676437f Dialer: Properly set navigation bar theme
+88db032bf Dialer: Rework empty illustrations
+5d91347a7 Dialer: Move Sensor settings to Other settings
+b286561eb Dialer: Add toggle for post call snackbar
+5a8cd4c1f Dialer: Add ability to set full screen photos for calls
+6fdbe14d5 InCallUI: SmartMute
+633c1110c Fix NPE in InCallPresenter
+492bcecf5 Fix to show voice mail notification icon for multi-sim
+baf58253e Dialer: Add option to disable proximity sensor
+75aa45b07 Dialer: Enable auto call recording for all
+5c0b0e137 Autostart call recording implementation
+b0bef82e6 Dialer: Make recording names sortable
+8045b6bfd Dialer: Enable call recording for all
+
+   * packages/apps/DocumentsUI
+f4f11cfb4 DocumentsUI: config: show search bar and disable all caps
+a0c4ec602 Use proper background in dark theme
+8d5f5d206 Add null check for ConfigStore in IconHelper
+
+   * packages/apps/Glimpse
+e88669a Glimpse: Sync up with Twelve
+
+   * packages/apps/Twelve
+a7c8487 Twelve: Handle timeout in remote clients
+a689363 Twelve: Add album arts to AlbumsFragment
 
    * toolchain/pgo-profiles
 c0f705d Add missing build rules for libz.afdo
@@ -1074,8 +1368,6 @@ d999254f58 C2SoftAomEnc: set AOME_SET_MAX_INTRA_BITRATE_PCT
 dac8e75ede libmediaplayerservice: Explicitly force callbacks to stop running
 
    * frameworks/base
-ce4a66e18209 fixup! Introduce high touch polling rate feature control
-ef033bb3a47e fixup! Add high touch sensitivity and hovering to InputService
 d130f2533978 SystemUI: Don't remove keyguard slice view
 be5657d8add7 SystemUI: Fix constraints for keyguard slice view
 
@@ -1097,33 +1389,8 @@ a82be30b10 SF: Don't enable expensive rendering for unknown dataspace
 88a4debda8 interfaces: bluetooth: Restore LC3 codec support for A2DP
 9b3e0fce92 graphics composer: move to foreground
 
-   * hardware/lineage/compat
-dca77d7 Import composer utils from hardware/interfaces
-
-   * hardware/qcom-caf/sm8150/display
-3003b1b4 gralloc: Fix RAW10/12 buffer alignment for trinket
-cdc85272 sdm: core: allow to skip refresh rate changes
-311c5bd9 sdm: core: allow to set a multiplier for the panel dimensions
-edd77ff1 display-product: Update display configs path for AOSP configuration
-a4813e03 Revert "gralloc: Fix issue with mmap/munmap meta due to reserved size"
-50c341eb gralloc: Bump allocator priority to 100.
-7bd0df38 gralloc: Use foreground cpuset/uclamp
-191da3a2 sdm: Set SDM event thread to SCHED_RR
-2cb7bdcd sdm: Set SDM event thread to SCHED_FIFO
-cf051eea Revert "sdm: Set SDM_EventThread as RealTime task with lowest priority"
-48a19ca1 Revert "Gralloc: Use handle reserved size while importing buffer"
-84b32d74 Merge tag 'LA.UM.9.1.r1-16400-SMxxx0.QSSI14.0' of https://git.codelinaro.org/clo/la/platform/hardware/qcom/display into 15.0-caf-sm8150
-
-   * lineage/scripts
-8817e8f device-deps-regenerator: Sort ignorelist alphabetically
-9c1f21c device-deps-regenerator: Ignore caimito
-56506ed device-deps-regenerator: Add lineage-22.1 branch
-
    * packages/apps/GameSpace
 b7b8ac7 GameSpace: Replace get/setPendingIntentBackgroundActivityLaunchAllowedByPermission
-
-   * packages/apps/Glimpse
-e88669a Glimpse: Sync up with Twelve
 
    * packages/apps/Settings
 8ac6e022632 Settings: SoftAp: add Hidden SSID preference
@@ -1135,8 +1402,13 @@ e31ae0e59a6 add back Unrestricted battery usage option to App battery usage scre
 01ab3deba4c Settings: Fix face enroll stack overflow
 
    * packages/apps/Twelve
-a7c8487 Twelve: Handle timeout in remote clients
-a689363 Twelve: Add album arts to AlbumsFragment
+ccad876 Twelve: SubsonicDataSource: Remove useless toString call for playlist ID
+508ef8e Twelve: LocalDataSource: Implement random suggestions
+ce99120 Twelve: Animated play / pause icon
+06d40cd Twelve: Contextual dialog for all media items
+fae91b2 Twelve: Hide progress bar by default in widget layout
+fe503c7 Twelve: Persist sorting preferences
+f63581e Twelve: Add sort by artist to albums
 
    * packages/apps/crDroidSettings
 b59e3f2 crdroid: Remove notification material dismiss
@@ -1203,6 +1475,9 @@ e38a5231 wpa_supplicant: add support for bcmdhd SAE authentication offload
    * frameworks/base
 593a1156577b fixup! Add an option to force pre-O apps to use full screen aspect ratio
 
+   * frameworks/opt/net/wifi
+e505b479a add support for always generating new random MAC
+
    * packages/apps/Launcher3
 7f70a788e4 New Crowdin updates (#465)
 4db48d0804 Update Crowdin configuration file
@@ -1247,33 +1522,6 @@ af85cdaf44 Launcher3: Use SelectorWithWidgetPreference for icon pack's selection
 1b0956417e Launcher3: Switch to icon pack theming preview
 35c4b515f0 Launcher3: Do not shrink resources
 339f9bdccb Launcher3: Add Icon Pack Support from Shade Launcher [SQUASHED]
-
-   * packages/apps/Twelve
-ccad876 Twelve: SubsonicDataSource: Remove useless toString call for playlist ID
-508ef8e Twelve: LocalDataSource: Implement random suggestions
-ce99120 Twelve: Animated play / pause icon
-06d40cd Twelve: Contextual dialog for all media items
-fae91b2 Twelve: Hide progress bar by default in widget layout
-fe503c7 Twelve: Persist sorting preferences
-f63581e Twelve: Add sort by artist to albums
-
-====================
-     12-29-2024
-====================
-
-   * bionic
-c3dd4ea4a Revert "Add better jemalloc stat logging."
-
-   * device/xiaomi/sm8250-common
-6c47396 sm8250-common: Build OSS Xiaomi touchfeature HAL
-55b3cb7 pipa: sepolicy: Allow Peripheral Manager to find TouchFeature service
-9509340 pipa: Add support for Xiaomi touchfeature HAL
-8f59586 Revert "sm8250-common: keylayout: Ignore bluetooth buttons for Xiaomi Pen"
-78d3403 sm8250-common: sepolicy: Resolve avc denials
-15f21e8 sm8250-common: sepolicy: label persist.vendor.EnableP3ColorSpace
-
-   * frameworks/opt/net/wifi
-e505b479a add support for always generating new random MAC
 
    * packages/apps/Settings
 cf38ece4ce2 Fix incorrect switch status when user stay in NightDisplaySettings page while scheduled night lights on
@@ -1422,446 +1670,4 @@ cd4a37f5bf1 Settings: Add platform and RAM to Model & Hardware
 
    * packages/modules/Wifi
 08d04b2ddb add option of always randomizing MAC addresses
-
-====================
-     12-28-2024
-====================
-
-   * device/qcom/sepolicy_vndr/legacy-um
-423b19556 sepolicy_vndr: Label additional kona/msmnile wakeup nodes
-
-   * frameworks/av
-8d4217ce0f audio: Remove UID check from per-app volume commands
-bef1e9a99e av: support per-app volume [1/3]
-77b1dc6caa audio: Check MODIFY_AUDIO_ROUTING permission for per-app volume
-
-   * frameworks/libs/systemui
-56e30ee iconloaderlib: Do not wrap themed icons
-71378f6 Override IconProvider class for IconPack support
-63ed69e Add support for overriding of IconProvider
-356fb9d iconloaderlib: Create new int array for hue calculation if tmp is too small
-fcdc6c8 iconloaderlib: Apply alpha from child icon to adaptive icon wrapper
-6c8b01f iconloaderlib: Add config hint to bypass adaptive icon wrapping
-
-   * packages/apps/Launcher3
-fa04e877d2 Launcher3: Remove blur animation on app launch/exit
-68a4ca4ded Launcher3: Address taskbar crash on fold devices
-8d4a9da723 Launcher3: Hide meminfo element in OverviewModalTaskState
-1fd1ed6a5f Launcher3: RecentsView: add null check for invocations mFirstFloatingTaskView
-e0165f7960 Launcher3: Show AOSP clear all button when chip disabled
-73cde864b3 Launcher3: Little revamp for app info bottom sheet
-534efb8102 Launcher3: Make Bottomsheet AppInfo strings translatable
-81761b4d8b Launcher3: Just say "System" instead of "Unknown" for app source
-dffe4b9d10 Launcher3: Add AppInfo Bottom Sheet from Shade Launcher
-cead09c8cf Launcher3: Allow setting stroke width for hotseat search bar
-f6c0c58641 Launcher3: Allow setting transparency for hotseat search bar
-0772dc105a Launcher3: Fix search bar background on light theme
-7b4dece572 Launcher3: Remove unused scrim color define
-ab85198725 Launcher3: Go to home screen before launching lens activity
-4f50794e02 Launcher3: Exclude overview lens activity from recents
-d0de933a3c Launcher3: Set FLAG_ACTIVITY_CLEAR_TASK for lens intents
-7a36f67d99 Launcher3: Prevent hotseat QSB crash with google stub
-68bd832f31 Launcher3: Tone down scrim background to N1 for vibrance
-c55a6303fe Launcher3: Make music search icon dependent on google search
-2d9a464af6 Launcher3: Make music search icon colorful
-55e4a3037b Launcher3: Optional music search toggle for QSB
-8939494afe Launcher3: Improve paddings for all apps search bar
-62d1123bd1 Launcher3: Adjust icons on dock search bar
-41f24423c0 Launcher3: Match app searchbar theme with dock searchbar
-e6e1af9f73 Launcher3: Do not set hardcoded colors for widget background
-4a1969d328 Launcher3: Apply corner radius setting for app searchbar
-0022796d51 Launcher3: Refine dock and all apps UI
-e110c620de Launcher3: Add toggle to show/hide app drawer search bar
-10fc2ea695 Launcher3: Allow to control parallax effect and center wallpaper
-d0921f7bc3 Launcher3: Add vibrate for all overview actions
-931427542d Launcher3: Add back spacer between overview buttons
-2bd30cb52e Launcher3: Add toggles for recent quick actions
-38af4576cc Launcher3: Start lens activity directly instead of sharesheet
-dff7281cb2 Launcher3: Add Google Lens scan button to recents
-effa8d3073 Launcher3: Disable live tile
-4704b506ec Launcher3: Fix launcher ui interface overlap and frozen problem
-58c180c6b9 Launcher3: Remove blur radius option if not supported
-86d77f7210 Launcher3: Change resource type for blur radius in DepthController
-6b9a94c8ae Launcher3: Add an option to customize blur radius
-445a2735be Launcher3: Use proper scrim color and alpha for bottom sheet
-b01d86b974 Launcher3: Follow all apps background for taskbar slide in view
-3570fd85ca Launcher3: Respect transparent app drawer in tablet UI too
-09f8d8b2ac Launcher3: Add recents and app drawer opacity customization
-671f775662 Launcher3: MemInfoView: Remove ZRAM text
-26c8f8221a Launcher3: Fix bottom margin for memory info view
-1da517afe2 Launcher3: Rewrite MemInfoView for efficiency
-866ae99681 Launcher3: Add ZRAM info on recents RAM overview
-dea8992d0e Launcher3: MemInfoView: Fix free memory calculation
-a1417a4996 Launcher3: Show actual memory without rounding up
-413f5d4a9c Launcher3: Open running services activity when clicking meminfo view
-590f44e36f Launcher3: Update meminfo margin when using taskbar
-c230c8730d Launcher3: Update recents view meminfo string
-de1a202519 Launcher3: meminfo: Replace deprecated BigDecimal methods
-04fd5aac73 Launcher3: Add toggle for memory info view
-f195d9d5fc Launcher3: Introduce memory info in overview
-518a6087fa Launcher3: Respect l/r cutout in tablet app drawer too
-c32035baea Launcher3: Show bottom scrim even in gesture navigation
-d548d24c55 Launcher3: QuickstepAtomicAnimationFactory: Add some null checks to prevent NPEs
-3f6660b23d Launcher3: Re-launch the keyboard when search becomes empty
-497c7a94b3 Launcher3: Cheap fix for taskbar app icons disappearing in portrait
-16a4a80521 Launcher3: Fix hotseat border space properly
-5a66ddcd46 Launcher3: Make google search of the query for app search bar
-013a3618bd Launcher3: quickstep: TouchInteractionService: Do not crash on boot
-4850965e48 Launcher3: Remove weird brown tint from tablet task menu
-790bcebc7f Launcher3: Fix keyboard disappear on empty search
-26ac948cde Launcher3: Hide keyboard when transitioning to home screen
-91f30cc4bf Launcher3: Do not limit the number of search results
-088a295593 Launcher3: Hide "all apps" view when search starts
-57a534ab82 Launcher3: Pull in screenshot drawable from Pixel
-f24dba7c6b Launcher3: Fix build warning in SplitShortcut
-aadc55b43f Launcher3: Prevent clipping by row height reduction
-a41de8d804 Launcher3: Allow hiding top shadow on statusbar
-d0b0f480c0 Launcher3: Add toggle to hide status bar
-62d8b2f1ba Launcher3: Add option to control wallpaper zooming
-1a99bbda02 Launcher3: Add pref to disable wallpaper scrolling
-1043c72c16 Launcher3: Update themed icon map on enabling themed icons
-c000c44599 Launcher3: UI elements color palette changes
-d086ddf34a Launcher3: Match hotseat background with app drawer scrim
-8a14138035 Launcher3: Add customization to set hotseat background opacity
-a0f4f3b4f8 Launcher3: Add light theme support for translucent hotseat background
-60a6682d06 Launcher3: Add toggle for translucent hotseat background
-008cc1e3f1 Launcher3: Add ripple animation to task menu items
-5ee741810e Launcher3: Adjust QSB width to align with hotseat
-f30938961e Launcher3: Account hotseatBorderSpace into qsbWidth and hotseat padding
-26c3896c95 Launcher3: Keep hotseat bottom spacing for taskbar devices
-7b5cbd5a66 Launcher3: Add hotseat bar space only if QSB enabled
-f9894c4b44 Launcher3: Do not add more space on hotseat with taskbar
-0099061c56 Launcher3: Improve spacing above and below dock searchbar
-d4cffd1bb8 Launcher3: Hotseat: Fix normal QSB width
-f479736a28 Launcher3: Remove scalable grid check for calculating QSB width
-dc1a2ad754 Launcher3: Clean up AssistantIconView
-bd69946db7 Launcher3: Fix taskbar crash without QSB
-b9db65f548 Launcher3: Fix crash launching google app from dock search bar
-359b381f35 Launcher3: Make icons center properly in QSB
-21b975493f Launcher3: Update QSB lens icon (2023 edition)
-f8e032fad2 Launcher3: Fix QSB fill colour in dark theme
-3ce1b07cad Launcher3: Better hotseat searchbar colors
-d86d67a62f Launcher3: Make google icon in dock searchbar clickable
-11903c948d Launcher3: Add ability to change corner radius of Dock search bar
-1a990f2b01 Launcher3: Add search bar sub-category
-5db037bbcc Launcher3: Add toggle to theme dock searchbar icons
-5538741c9e Launcher3: Enable lens icon for dock searchbar
-5bbf3fb3cf Launcher3: Refine sizes and positions of icons in Dock search bar
-c4352add0e Launcher3: Refine qsb icon layout
-d25ac6bb7e Launcher3: Add toggle disable hotseat searchbar
-b27c2bee58 Launcher3: Implement Hotseat searchbar
-fdea0d8a24 Launcher3: Make drawer cells square when labels are hidden
-c832ea58c3 Launcher3: Add pref to set app drawer row height
-5242287dc8 Launcher3: Add taskbar switch under misc settings
-
-   * packages/apps/Settings
-480854bb207 NightDisplay Settings: Use List Preference for NightLight settings
-f1a9d485b78 Settings: Use ListPreference instead of DropDownPreference
-fcde5b36474 Settings: Use List Preference for Dark mode
-badf55e1d08 settings: drop divider in dark mode screen
-a80f38dae84 Settings: Follow navbar color in base
-f587437f5f5 Settings: Use pixel blue for icon
-66f3290ec78 Settings: Update overlay package for pure black theme
-c74504c896c gestures: Update required hint switch package
-16685b14f1b Enable FeatureFlags on "user" builds too
-5d26cf11ee2 SlicesDatabaseHelper: Use Build.VERSION.INCREMENTAL
-f86eba7cf57 Settings: Add back crdroid logo
-183796e9104 Settings: Show CR version in About menu
-
-   * prebuilts/clang/host/linux-x86/clang-latest
-af6633c Update prebuilt Clang to r536225 (19.0.1).
-
-====================
-     12-27-2024
-====================
-
-   * build/bazel
-5424fe39 bazel: dev-keys -> release-keys
-
-   * frameworks/av
-161bc78393 MediaProfiles: Check before overriding media settings xml
-f823adca0b media: Add changes to pick target specific media xml's
-11c4acc544 media: OMXStore: Import loading libstagefrightdolby
-f5fb422ce2 OMX: Remove support for prebuilt ac4 decoder
-3025d72e0e libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
-01d9dfb43e Fix producer usage in virtual camera
-5b3a61b244 frameworks/av: Import Xiaomi Image Tags defenitions
-5ce2b0d4b7 fixup! "libcameraservice: add TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB"
-38eab61285 av: Initial support for 24bit encoding and 6 channels
-b05fbcffa8 audioflinger: Do not allow DAP effect to be suspended
-c04699080b libcameraservice: add TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB
-660d180961 libcameraservice: Add support to set vendor tag with client package name
-b834060f8c nuplayer: Avoid crash when codec fails to load
-abe216679d StagefrightRecorder: Add "set-title" parameter
-c6a9da1ef7 libstagefright: Allow HFR-60 in HAL-3 recording
-6a8b2554cc libstagefright: Support YVU420SemiPlanar camera format
-5ef7ea9012 stagefright: add changes related to high-framerates in CameraSource
-152e6565e9 camera: Don't segfault if we get a NULL parameter
-a3e2360b65 Camera: Removing cachedump call to miminimize delay during close.
-3aeec1ff64 Camera: Flush Improvements - Result drain optimization
-34782a8158 CameraService: Fix deadlock in binder death cleanup
-42257bcdb1 av: Remove restrictions for system audio record
-8179b04bc6 Camera: Add support for preview frame fd
-a99c2c97af CAMX: CHI: Added support for handling jpeg debug data.
-02e481060c fixup! Camera: Skip stream size check for whitelisted apps
-
-   * frameworks/libs/systemui
-b6d2f84 monet: Allow chroma & luminance to affect secondary colors [2/3]
-0b6433f monet: Re-add our custom monet features here
-2abc632 iconloaderlib: Force themed icon over app monochrome icon
-146062e iconloaderlib: Invalidate icon cache between OS releases
-d4bd510 Multiple work profile badge colors for Launcher3
-
-   * frameworks/native
-1fece8c1bd gui: Re-apply missing symbols needed for WFD libs
-3a4743b0a4 fix potential leakage issues
-c1859ae8c7 Native: ProducerListener: Import ON_BUFFER_DETACHED Changes
-92182f63ef Native: Camera: Import Release Slot Xiaomi Changes
-
-   * lineage-sdk
-c23475f1 ChargingControl: Prevent crash against very frequent power toggle
-930bf624 sdk: Add customization for double tap recents key [1/3]
-a97a47fa lineage-sdk: Allow to customize bottom corner swipe up action [3/4]
-dd7add97 Add three fingers swipe actions [1/3]
-e830775a Add restart SystemUI in Advanced Reboot [2/2]
-273d5623 Add On-The-Go Mode to power menu constants
-8e4fd44d Set long press on back default to kill app
-965b0a02 Add more device key actions
-c57ace14 NotificationLights: Allow overriding for all apps [1/2]
-18c8d7e5 Battery light: 100% charged level (3/3)
-920c85b1 Add toggle to allow advanced restart on secured lockscreen[1/2]
-55565a11 Add settings for brightness slider improvements
-139910e0 Fix settings pref switch for multi-user
-de033e20 Properly set default value for switch pref
-c459fdc5 Allow value to hide the clock
-5a95fc5e Allow value 3 for status bar quick pull down
-b219933a Remove setting loading for FORCE_SHOW_NAVBAR
-d6697c2e Bring our icon
-d92864af Try loading default setting value for switch
-2d6ed562 Set summary automatically if required
-6a6feaa0 Replace los versioning
-61ede954 Enable advanced reboot by default
-8625c29a Do not prevent boot on database downgrade
-750eb8be Kill trust interface hint on first boot
-713d1c01 Disable by livedisplay by default
-75ee0e61 Ship as crDroid based on LOS
-
-   * packages/apps/Launcher3
-e364cb314b Launcher3: Fix crashes when navigating from launcher settings to home screen
-409807a504 Launcher3: Add null check for BaseDragLayer
-6dc71289ce Launcher3: Allow widgets to have 1 row as minimum size
-fbb52032ff Launcher3: Apply material you palette to folder background
-b2392a6ae7 Launcher3: Don't apply disabled alpha to search hint
-69a5bff49e Launcher3: HotseatEduController: Guard against some odd & rare NPE
-7a91d55e56 Launcher3: Add WallpaperManager check to support WSA
-0b61a82eab Launcher3: Migrate deprecated getColor to one with Theme
-a55ea81e43 Launcher3: Add kill action to app shortcuts popup
-109ca4696f Launcher3: Add toggle to use two lines for app label
-793e079adb Launcher3: Add icon and icon text size customizations
-2a16631ac4 Launcher3: Import CustomSeekBarPreference from crdroid
-1a3d63c809 Launcher3: Migrate MainSwitchBar and Switch to Material3
-5d69ffa933 Launcher3: Fix uninstalling apps from recents
-8f07bf92c0 Launcher3: Fix Uninstalling work apps
-e328051a8d Launcher3: Add UNINSTALL shortcut to QuickstepLauncher
-bbac8a65c6 Launcher3: Update UNINSTALL TaskShortcutFactory for A15
-01b93668d7 Launcher3: Use standard launcher method for uninstalling
-1dbdf00530 Launcher3: Add uninstall button to system shortcuts
-4cf4b30842 Launcher3: Show clear all button in recents overview
-3b0cc65223 Launcher3: Vibrate on double tap to sleep
-7e828798fc Launcher3: Make double tap to sleep gesture optional
-6da5c36855 Launcher3: Double tap on home screen to turn off screen
-1dd1d72d24 Launcher3: Show a toast when restarting the launcher
-f53948a807 Launcher3: Add a preference to manually restart the launcher
-83ad2da27c Launcher3: Restart launcher on google app change
-1060e7c5df Launcher3: Add restart action for toggling settings
-1dc66e8b1d Launcher3: Fix app icon font
-86b5cb7101 Launcher3: Use regular body font for app labels
-6df6a92de4 Launcher3: Use font configs instead hardcoded fonts
-60877efb49 Launcher3: return if recentsView is null
-44f26436e9 Launcher3: Return if launcher is null in notifyRecentsOfOrientation
-277e9729ea Launcher3: Follow navbar color in base for settings
-813cc61765 Launcher3: Re-add priv app permissions
-52ead0062a Launcher3: Update the work FAB after attaching it
-d7118f2286 Launcher3: Work tab adjustments for multiple profiles
-f847167be3 Launcher3: Fix pausing work apps from multiple profiles
-c3ee4215ee Launcher3: Update pause apps feature dialog
-7621cc44ee Launcher3: Change "Pause work apps" to "Turn off work apps"
-455fe68e92 Launcher3: Pause apps feature
-569b1063be Launcher3: Hide app suggestion entry if DPS not available
-d138252540 Launcher3: Allow changing app suggestion settings
-1e83eb774d Launcher3: Improve hidden & protected apps
-4abe267aa3 Launcher3: Implement hidden & protected apps
-0f0e04ccff Launcher3: Fix all apps drawer themed icons toggle
-4e9e8fa2f5 Launcher3: Ability to toggle themed icons for all apps
-fce0c9b4b5 Launcher3: Google Feed integration
-69aa0a170c Launcher3: Add toggle for desktop and drawer labels
-43c68dc545 Launcher3: Hide scrollbar when searching All Apps
-368e62ea2f Launcher3: Hide home screen rotation pref if not supported
-2f03f3eb02 Launcher3: Unconditionally hide split option for Go-enabled targets
-f5952c50b4 Launcher3: Fix active tab color on light theme
-735c101fbf Launcher3: Disable QSB on first screen by default
-08314442c9 Launcher3: Allow disabling workspace edit
-8949da0dcb Launcher3: Workspace: Allow resizing any widget
-60beac1e6c Launcher3: Adjust the icon size to the grid size
-d6b2d5be68 Launcher3: Move to SwitchPreferenceCompat
-248879dea7 Launcher3: Rearrange settings into categories
-a751a25eef Launcher3: Make it a platform package
-baa12eed5e Launcher3: Fix potential ConcurrentModificationException
-e6137540bd Launcher3: Fix rtl layout error
-84e3e912ce Launcher3: Fix crash in SurfaceTransactionApplier
-5cf712ba14 Launcher3: Fix monkey crash in createSurfaceParams
-5a0f73f805 Launcher3: Fix monkey crash in RecentsLaunchAnimator
-05e9f625d0 Launcher3: Refresh themed icons after OTA update
-5f5b4ec320 Launcher3: PageIndicatorDots: null pointer Exception
-81d50359b5 Launcher3: Stability NullPointer issue
-a60c9d78fa Launcher3: Prevent NPE when using custom themed icons
-fea8e8dbe4 Launcher3: Add NPE check in TaskbarDragController
-93d5b621cb Launcher3: AppsSearchContainerLayout: Avoid NPE
-56224f2b48 Launcher3: Fix TaskbarViewCallbacksFactory instantiation
-9902a4432c Launcher3: Fix TaskbarModelCallbacksFactory instantiation
-ad93dfc7a7 Launcher3: Use different badges for different work profiles
-450e4820c6 Launcher3: Add support for toggling taskbar
-f74764dc1b Launcher3: Fix sorting in zh-Hans-CN
-2cc8679bea Launcher3: Improve search bar header protection
-7621962076 Launcher3: Fix All Apps header protection and spacing again
-8fe13a7424 Launcher3: Skip glitchy search animation
-26cc3e6b8b Launcher3: Fix Personal/Work profile tab colors in AllApps
-001966f3e8 Launcher3: Disable all caps from Personal and Work tabs
-a9028008fc Launcher3: Fix gesture navigation fail to move to bottom
-30974b6c6f Launcher3: Switch back to tertiary color for search hint
-e6b1a59f7c Launcher3: Increase end padding for search bar UI
-e2aabb1612 Launcher3: Update search icon to match Settings
-15f83a3534 Launcher3: Fix search bar UI in All Apps
-36359286e1 Launcher3: Improve search bar UI in All Apps
-d171792855 Launcher3: Fix NPE with swipe down
-310b14756a Launcher3: Use ThemePicker as wallpaper picker
-2d51a7238e Launcher3: Use system collapsing toolbar
-5f9aa7bffe Launcher3: Fix all apps view not dismissing
-eb6627db0e Launcher3: Expose themed icon setting in ThemePicker
-75450cd0a4 Launcher3: Properly expose GridOptionsProvider
-941e1a955a Launcher3: Fix no. of hotseat icons for 4x5
-67b264b364 Launcher3: Eleven -> Twelve
-25ab450c5d Launcher3: Add google camera to hotseat
-04771d77f4 Launcher3: Update activity for Aperture camera shortcut
-10bdec0200 Launcher3: Add moto camera to workspace
-28d32615b8 Launcher3: Add x8 x10 workspaces
-35d7f19379 Launcher3Go: Add Go specific default workspace
-dda5175f5f Launcher3: Add 2x2 workspace grid option
-988f1e7fef Launcher3: Add 5x6, 5x7 and 6x6 default workspaces
-4c8c8f7722 Launcher3: Replace 4x4 grid option with a 4x5 one
-c538092365 Launcher3: Update default workspace
-2b36f201a8 Launcher3: Change app name to crDroid Home
-44f5f35a90 Launcher3: Override QuickSearchBox
-42661b3b1b Launcher3: Use adaptive icon
-
-   * packages/apps/LineageParts
-161a6c3 Disable unused components
-f8bb054 Remove unused Network Traffic fragment
-e93d682 Use ListPreference for charging control fragment
-0cd7b12 Update color mode preview from Android 12
-d26af1b Utilities: Fix inaccess Build.DATE
-bb32396 Kill redundant search fun party
-4f84995 Make trust interface less boring
-ceefe38 Add initial crDroid stats support
-a94fd4c stats: Mod version switched to crdroid version
-73ced12 Ship as crDroid based on LOS
-
-   * packages/apps/Messaging
-6cdd458 Messaging: Tint recipient field properly
-8ae3809 Messaging: Style ViewPagerTabStrip's underline properly
-edb2686 Messaging: Get rid of storage permissions
-161c3e9 Messaging: Remove VisibleForTesting
-bbf9033 Messaging: Style the subject line properly
-e11745a Messaging: Style the attachment choosers properly
-3788b9d Messaging: Style the attachments properly
-6e9a803 Messaging: Handle default SMS app setting properly
-241b4cf Messaging: Style even more dialogs properly
-0aa08c0 Messaging: Finish after no more contacts are blocked
-e5eb059 Messaging: Rename in german
-68a3707 Messaging: Get rid of deprecated PhoneStateListener
-590243f Messaging: ContactMediaChooser: Remove permission requesting
-c73fdc5 Messaging: Replace permission requests with launchers
-7f464b4 Messaging: Replace own camera handling with pickers
-6cc0e38 Messaging: Get rid of onActivityResult()
-06bb0cc Messaging: Auto-format the manifest
-d940ab7 Messaging: Fix a few android related things
-e128bff Messaging: Language cleanup
-e335f6b Messaging: Use ActivityResultContracts for media and contacts
-7f9087a Messaging: Properly hide and show FAB
-d4ac014 Messaging: Use an extended FAB
-056cf5f Messaging: Fix navigation bar theming
-b12a4f8 Messaging: Fix loader not auto-restarting
-6d11a66 Messaging: Fix C-style array declarations
-5403d02 Messaging: Fix javadoc
-e29b158 Messaging: Remove unused code
-0069df8 Messaging: Replace explicit types
-9538179 Messaging: Use try-with-resource
-2a09fa3 Messaging: Fix indicated issues in layouts
-bd46716 Messaging: Remove unused static libs
-f31b198 Messaging: Remove usages of DataUsageStatUpdater
-5ed268c Messaging: Style the SwitchPreferences
-1914db5 Messaging: Convert further parts to androidx
-d430161 Messaging: Fix warnings about drawables and colors
-fd63d5f Messaging: Use StandardCharsets where possible
-a2f67b4 Messaging: Remove GServices
-7f22a3e Messaging: Remove low storage handling
-d43b6ff Messaging: Let there be lambdas
-c1b4aa4 Messaging: Nullability
-e35d385 Messaging: Remove unnecessary toString() and String.valueOf() calls
-21cb2b6 Messaging: Fix modifiers
-37d6d70 Messaging: Prevent broadcast spoofing
-101b31e Messaging: Remove unused resources
-3b7f05b Messaging: Replace ExifInterface with its androidx counterpart
-d869533 Messaging: Use xml drawables
-4ecf5bc Messaging: Fix wrong icons
-7c55a6d Messaging: Remove compatibility for old android versions
-9bbc7a8 Messaging: Fix file permissions
-a65de2a Messaging: Rename androidx.appcompat.mms
-009df43 Messaging: Remove cell broadcasts
-6a10100 Messaging: Properly style dialogs
-bc93ce3 Messaging: Bump sdk (>=33, <=34)
-f3863c9 Messaging: Remove tests
-
-   * packages/apps/SetupWizard
-6025212 SetupWizard: Add graphic for theme select page
-a716828 SetupWizard: Bring it on our side
-133ad8b SetupWizard: Use correct updater package
-ea891f1 Ship as crDroid based on LOS
-
-   * packages/apps/Updater
-a2e31f1 Revert "Updater: 20 and up are integers!"
-b31dd16 Revert "Updater: Handle NumberFormatException"
-
-   * system/core
-7b61cde61 Avoid unnecessary allocation in VectorImpl
-cb920b435 core: Lockscreen Charging (2/3)
-0ae815339 camera: Add L-compatible camera feature enums
-1454c07d6 Camera: Add feature extensions
-dab5f19f4 init: reboot to recovery on panic by default to allow reading pstore
-477933a9f init: Do not set safety net props for ENG builds
-f40a59a1e init: Spoof more props
-5e12d8d88 init: Add more properties to spoof.
-41858982f init: Weaken property override security for the init extension
-7e67fba99 init: Set properties to make SafetyNet pass
-79692f7d3 init.rc: don't start console unless asked to
-9e2bcb4d1 init.rc: Disable native stats collection service
-174be12e9 debuggerd: Adapt rom name in tombstones
-99c833bea Revert "init.rc: remove 4.9/4.14 support"
-0263a8725 debuggerd: Set correct version for tombstone
-
-   * system/sepolicy
-a6ae0e323 sepolicy: Allow system app to access sysfs_leds
-c06552630 Allow system server to access tmpfs files
-8bf93b277 Allow adb root on user builds
-
-   * system/update_engine
-3ac4a194 update_engine: Always disable signature and downgrade checks
-a82db273 update_engine: Allow backup tool to run in user builds
-
-   * vendor/addons
-de6a1ee addons: Update SystemUI clocks from komodo 15.0.0 (AP4A.241205.013, Dec 2024)
-
-   * vendor/lineage
-292ca28a kernel: Block HIP detection through HIP_PATH=none
-33c2beea overlay: Change 5G+ -> 5G UC for T-Mobile
 
