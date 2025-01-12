@@ -2,6 +2,13 @@
 *This page will not be updated for minor updates.
 
 
+- 20250112
+セキュリティパッチが2025-01-05になりました。
+sim設定関連が出てしまう現象、他のtabletでもでてますかね？
+
+The security patch is now 2025-01-05.
+
+
 - BETA/20250107
 ** 旧バージョンに戻す場合はデータの消去が必要となりますのでバックアップは必ずとってください **
 Early-adopter/20250105にビルド時点までの修正を加えたものになります。
