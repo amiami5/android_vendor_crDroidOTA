@@ -2,7 +2,17 @@
 *This page will not be updated for minor updates.
 
 
-- 20250112
+- BETA/20250113
+crDroidがBETAタグに戻したのでこちらもそれに従います。
+呼び名の違いだけですのでインストールされたかたもそのまま使用していただいて問題ありません。
+過去のバージョンに上書きして戻すことはやめたほうがいいです。おそらくユーザーデータが壊れます。
+
+crDroid has reverted to the BETA tag, so we will follow that.
+It's just a name difference, so if you've already installed it, please continue to use it as is.
+** It is not recommended to install the previous version over the existing one. **
+
+
+- 20250112(Deleted)
 セキュリティパッチが2025-01-05になりました。
 sim設定関連が出てしまう現象、他のtabletでもでてますかね？
 
