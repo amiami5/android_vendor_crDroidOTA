@@ -2,6 +2,12 @@
 *This page will not be updated for minor updates.
 
 
+- 20250119
+v11.1です。問題ないようなら数日後にpush通知する予定です。
+
+v11.1 has been released. I will push notification in a few days if everything looks okay.
+
+
 - BETA/20250113
 crDroidがBETAタグに戻したのでこちらもそれに従います。
 呼び名の違いだけですのでインストールされたかたもそのまま使用していただいて問題ありません。
