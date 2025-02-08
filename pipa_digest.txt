@@ -1,5 +1,15 @@
-*このページは軽微な更新では更新されません。従来の基準ではアップデータによる通知が一切できないと判明したので変えました。
-*This page will not be updated for minor updates.
+///  公式のメンテナーさんが再稼働したようなので、そちらのROMを使ってください               ///
+///  The official maintainer seems to be up and running again, so please use that ROM!  ///
+
+
+
+
+
+
+
+
+
+
 
 
 - 20250119
