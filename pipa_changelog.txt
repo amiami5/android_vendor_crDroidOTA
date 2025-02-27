@@ -1,9 +1,134 @@
 ====================
-     02-22-2025
+     02-28-2025
 ====================
 
    * bootable/recovery
-030db63e minui: Import graphics_drm fix from QSSI 13
+d6e69855 minui: Import graphics_drm fix from QSSI 13
+
+   * device/xiaomi/sm8250-common
+617ba37 sm8250-common: remove multiple different specifications for  vendor.nxp.nxpnfc_aidl.INxpNfc/default
+230fce2 sm8250-common: Build libcodec2_hidl_shim
+6205c84 sm8250-common: Add support for Dolby Vision
+7114d19 sm8250-common: Enable camera override format from reserved
+bf0cd30 sm8250-common: Set arch variant to armv8-2a-dotprod
+0ab542b sm8250-common: Target arm v8.2a and A55
+76f655b sm8250-common: display: Disable the property debug.sf.enable_gl_backpressure
+f0af45e sm8250-common: display: Set debug.sf.auto_latch_unsignaled to 0
+d0b702b Revert "sm8250-common: Don't latch unsignal buffers"
+fdbaf46 sm8250-common: Do not force DCI-P3 on adaptive color mode
+a6d5531 sm8250-common: Build broken flags for dolby vision
+75ed9c6 sm8250-common: parts: Update overrideHdrTypes API for U
+a383fa7 sm8250-common: parts: Override HDR types for dolby vision
+e94d51b sm8250-common: Import MiSound Audio Effect
+3a40ae8 sm8250-common: Add support for Dolby Atmos
+4cb0eaf sm8250-common: Restore I/O performance
+6be2bca sm8250-common: Move runtime cpuset configuration after post_boot completed
+c51a68b sm8250-common: Set dex2oat thread count and cpuset
+244505c sm8250-common: Do not allow foreground tasks to run on CPU7
+c3b919d sm8250-common: Set schedutil rate limit after post_boot completed
+ed9dacb sm8250-common: Improve INTERACTION boosting
+0f81099 sm8250-common: Bump up devfreq boost on INTERACTION
+7731345 sm8250-common: Boost gpu on LAUNCH
+4b0da0e sm8250-common: Bump little cluster boost upon INTERACTION
+88e5ab5 sm8250-common: parts: Fix thermal profile screen state handling
+8b5d1b4 sm8250-common: Improve surfaceflinger Service
+a4bb02a sm8250-common: init: rm package cache on early boot * Because Android won't do it on a dirty flash so certain elements will be broken if something is changed in UI.
+3fc6821 sm8250-common: Use dex2oat64
+c2286fb sm8250-common: dex2oat: Strip off some debug packages
+368457a sm8250-common: Always preopt extracted APKs
+972be26 sm8250-common: Compile system services using speed-profile
+6119ce0 sm8250-common: Compile HWUI for performance
+
+   * packages/apps/Updater
+d2535c8 20250221対策
+
+   * vendor/xiaomi/sm8250-common
+bbad20a sm8250-common: Build libcodec2_hidl_shim from source
+98761d1 sm8250-common: Add support for Dolby Vision
+289b6b1 sm8250-common: Import MiSound Audio Effect
+4840086 sm8250-common: Import Dolby Atmos blobs
+
+====================
+     02-27-2025
+====================
+
+   * vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+4944205 Revert "Revert "ipacm: Add support for DataWarning limit""
+
+====================
+     02-26-2025
+====================
+
+   * packages/apps/Aperture
+b0eea75 Aperture: More lint fixes
+fa6f4d0 Aperture: `values()` -> `entries`
+a1514f1 Aperture: Cleanup experimental CameraX annotations
+50805c4 Aperture: Remove not needed deprecation suppress
+f0a16c0 Aperture: Bump JVM version to 17
+b384c7f Aperture: lens_launcher: Bump SDK to 35
+4c2c873 Aperture: Update AGP to 8.8.1
+cfe5d27 Aperture: Update Gradle wrapper to 8.13
+0d1066c Aperture: Move to Gradle catalog and update Gradle templates from Twelve
+e4afda2 Aperture: Reformat code
+
+   * packages/apps/Jelly
+925c0a9 Jelly: Introduce HttpUtils#bitmap()
+
+====================
+     02-25-2025
+====================
+
+   * frameworks/base
+9900ce82b154 Fix nav bar flickering when dialog shows
+
+   * hardware/lineage/interfaces
+19de245 aidl: light: Treat keyboard devices as keyboards
+a163b58 aidl: light: Support `charging` LED
+
+   * hardware/qcom-caf/sm8450/display
+8f6535f6c6 sdm: hwc: Allow enabling doze mode support with a property
+
+   * packages/apps/Launcher3
+0201835a74 Fix Navbar height issue
+
+   * packages/apps/Twelve
+d62490f Twelve: Reduce number of player callbacks
+5dea906 Twelve: Reformat code
+
+====================
+     02-24-2025
+====================
+
+   * device/xiaomi/pipa
+afb1b23 Updaterのcommit変更
+
+   * frameworks/base
+1cb78b5c4745 SystemUI: Hide QR code scanner tile if not launch activity available
+b289a8beaa17 Fix settings not applied on boot for device key actions
+822c94dd230b New Crowdin updates (#1213)
+
+   * hardware/lineage/compat
+ee08dfa compat: libnativehelper: clang-format
+dfdc32e compat: libaudioproxy: clang-format
+
+   * packages/apps/Dialer
+7cc5e1753 New translations (#145)
+
+   * packages/apps/GameSpace
+1e297c0 New Crowdin updates (#106)
+
+   * packages/apps/Glimpse
+8b37257 Glimpse: MediaRepository: Introduce medias(List<Uri>)
+
+   * packages/apps/Launcher3
+b27291eb2a New Crowdin updates (#481)
+
+   * packages/apps/crDroidSettings
+4471311 New Crowdin updates (#1223)
+
+====================
+     02-23-2025
+====================
 
    * build/make
 1ad296f499 build_image: get squashfs partition size from image size
@@ -79,6 +204,7 @@ e2481ec7 Enable advanced reboot by default
 3d84e33a Ship as crDroid based on LOS
 
    * packages/apps/Glimpse
+7e7ea6d Glimpse: Fix trashed SECURE_REVIEW items not getting removed from screen
 dde8aa8 Glimpse: buildList for the win
 
    * packages/apps/Launcher3
@@ -308,6 +434,7 @@ f668f944 ThemePicker: Wait for transition end before setting active option
 2d387bad ColorPickerRepositoryImpl: Don't crash for unknown style selection
 
    * packages/apps/Twelve
+ae0a3ea Twelve: NowPlayingFragment: Fix shuffle and repeat marker being cut in half
 af4cd4e Twelve: MediaRepositoryTree: Don't crash in case of error
 8710915 Twelve: buildList for the win
 6f40e59 Twelve: Add support for search queries
@@ -323,7 +450,6 @@ f9fd41c Twelve: Stop using fitsSystemView=true on CoordinatorLayout
 22e2370 Twelve: Remove useless orientation attribute on CoordinatorLayout
 
    * packages/apps/Updater
-eb7cd64 自分用updater
 2946619 New translations (#84)
 32e2bf6 Update Crowdin configuration file
 3415292 Catch exceptions when enabling performance mode
@@ -408,14 +534,8 @@ facb6c39 apns: Update mobily APN for prepaid connection
 63e72a87 build: Ship as crDroid based on LOS
 
 ====================
-     02-21-2025
+     02-22-2025
 ====================
-
-   * device/qcom/sepolicy_vndr/sm8450
-0624d88e9 sepolicy: NFC: Label NXP NFC 2.0 HIDL
-
-   * device/qcom/sepolicy_vndr/sm8550
-78af5575a sepolicy: NFC: Label NXP NFC 2.0 HIDL
 
    * device/xiaomi/pipa
 39dabbf pipa用recoveryを引っ張ってくる
@@ -427,10 +547,27 @@ fd4b460368e6 Fix brightness bar background color changed unsync issue
 a6375bcf9cdc Fix NPE for PackageInstallerSession
 c82f6a236881 PowerStats: extend the MAX_STATS_ARRAY_LENGTH
 87f0aa063689 Avoid NPE in Html.toHtml() when <font> is missing a face attribute
-170ea7388084 Cache w.canReceiveKeys().
 
    * packages/apps/Glimpse
 a05d2fa Glimpse: Show warning regarding trash's auto-empty behavior
+
+====================
+     02-21-2025
+====================
+
+   * device/qcom/sepolicy_vndr/sm8450
+0624d88e9 sepolicy: NFC: Label NXP NFC 2.0 HIDL
+
+   * device/qcom/sepolicy_vndr/sm8550
+78af5575a sepolicy: NFC: Label NXP NFC 2.0 HIDL
+
+   * frameworks/base
+170ea7388084 Cache w.canReceiveKeys().
+
+   * packages/apps/Aperture
+0fd3ae9 Aperture: Switch to upstream zxing-cpp
+
+   * packages/apps/Glimpse
 2162911 Glimpse: Break as soon a valid media type is found
 
 ====================
@@ -444,12 +581,8 @@ e12f0132b5 core: Treat vendor/lineage-priv/* as release-keys
    * build/soong
 8b8cdfec3 soong: Treat vendor/lineage-priv/* as release-keys
 
-   * device/xiaomi/sm8250-common
-745f333a sm8250-common: Don't use SubsettingsBase_v31
-391ac0f9 sm8250-common: Fixup Rotation tweaks for Lineage
-
-   * packages/apps/Aperture
-0fd3ae9 Aperture: Switch to upstream zxing-cpp
+   * frameworks/base
+49cfa4e7f63a Update statusBarState in KeyguardStatusBarViewController
 
    * toolchain/pgo-profiles
 a68936d Remove AFDO profile for libz
@@ -461,291 +594,13 @@ a68936d Remove AFDO profile for libz
      02-19-2025
 ====================
 
-   * frameworks/base
-49cfa4e7f63a Update statusBarState in KeyguardStatusBarViewController
-
    * packages/apps/Catapult
 fb83201 Catapult: String improvements & fixes
-
-====================
-     02-18-2025
-====================
-
-   * device/xiaomi/sm8250-common
-a92a8e1e sm8250-common: parts: Add RotatePolicy configure interface
-c56bd6a8 sm8250-common: Bump up devfreq boost on INTERACTION
-04b96ca8 sm8250-common: Restore I/O performance
-f8e87a60 sm8250-common: Boost gpu on LAUNCH
-1ff0b536 sm8250-common: Bump little cluster boost upon INTERACTION
-f81215e9 sm8250-common: Move runtime cpuset configuration after post_boot completed
-724eeb66 sm8250-common: Set dex2oat thread count and cpuset
-bc21789c sm8250-common: Set schedutil rate limit after post_boot completed
-08762db7 sm8250-common: Enable camera override format from reserved
-a2f53aa8 sm8250-common: Set arch variant to armv8-2a-dotprod
-3bc3734e sm8250-common: Target arm v8.2a and A55
-b9b055b2 sm8250-common: Enable usage of dex2oat64
-ef9b8076 sm8250-common: display: Disable the property debug.sf.enable_gl_backpressure
-5f3de110 sm8250-common: display: Set debug.sf.auto_latch_unsignaled to 0
-5f7668e3 Revert "sm8250-common: Don't latch unsignal buffers"
-91996698 sm8250-common: Do not force DCI-P3 on adaptive color mode
-4ca02f56 sm8250-common: Sync extract scripts with 22 templates
-
-   * external/avb
-5986166 avbtool: Add --set_verification_disabled_flag arg
-
-   * packages/apps/Twelve
-3dcf24e Twelve: Fix visualizer, hopefully for the last time
-5053246 Twelve: Take into account the timeline for the queue
-ccdd16b Twelve: Add notification shuffle/repeat
 
    * packages/apps/Updater
 e92031f !fixup Updater: Allow Updater to handle major upgrades via property
 c9159bf Updater: Allow Updater to handle major upgrades via property
 
-   * toolchain/pgo-profiles
-a4189c5 Merge https://android.googlesource.com/toolchain/pgo-profiles into fifteen
-
    * vendor/lineage
 3d683b1c apns: Update for ChinaTelecom Macau (CTMO)
-
-====================
-     02-17-2025
-====================
-
-   * frameworks/base
-2af9c40d99a2 Merge pull request #1212 from meiser79/15.0
-1b7a6b45b6d4 TelephonyManager: Gracefully handle null telephony service - isNullCipherNotificationsEnabled
-0854931c7e22 Telephony: Gracefully handle data enablement checks
-51de421edbca TelephonyManager: Gracefully handle null telephony service [2]
-
-   * packages/apps/Aperture
-59013c8 Aperture: Update kotlin to 1.9.23
-759f8d0 Aperture: Update gradle{,w} to 8.12
-0e49f58 Aperture: Update ZXing-C++ to 2.3.0
-62bc27b Aperture: Update CameraX to 1.5.0-alpha05
-39a00a1 Aperture: Ensure secure URIs are inserted in order
-4fc2193 Aperture: Update kotlin to 1.9.10
-
-   * packages/apps/DeskClock
-296e428c0 DeskClock: Convert ListPreferences to SimpleMenuPreferences
-5ddac9586 DeskClock: Remove the summaries for AM/PM and bold text
-f0f776a74 DeskClock: Hide or disable some screensaver settings
-713a91649 DeskClock: Fix formatting in ScreensaverSettingsActivity
-
-   * packages/apps/Glimpse
-a0ad138 Glimpse: Split ACTION_REVIEW from ACTION_REVIEW_SECURE
-
-   * packages/apps/Jelly
-1f5f1bc Jelly: Save user agreement about protected media
-
-   * packages/apps/Twelve
-eb13860 Twelve: Use Resources when possible to fetch resources
-7b7be5f Twelve: Fix some format strings
-b503c04 Twelve: Make player/mediaLibrarySession lateinit
-5d265a0 Twelve: Reformat code
-1120101 Twelve: Handle empty resumption playlist
-
-   * packages/apps/Updater
-5ab3076 Updater: Show "no items" view after deleting last update
-
-====================
-     02-16-2025
-====================
-
-   * device/qcom/sepolicy-legacy-um
-ff381799 sepolicy: Add default permission for aidl hal_bootctl
-
-   * device/xiaomi/pipa
-769284d pipa: update vendorsetup.sh
-976d2fe pipa: drop local priv keys and switch to pico gapps
-
-   * frameworks/base
-9a97766b338f fixup! SystemUI: Update resources on theme change in shade header
-eab77188129d Merge pull request #1210 from keosh1/15.0
-8cc0605ff9cd Merge pull request #1209 from ionutsandroidbuilds/15.0
-595a736ac102 hwui: Compile without no-omit-frame-pointer
-94caee39b405 Fix NPE upon android.intent.action.LOCALE_CHANGED
-f64614d0d124 Revert "fix NPE system_server crash in IMMS.resetDefaultImeLocked()"
-
-   * lineage-sdk
-436d7503 health: Format notification's target time according to locale
-27727963 Automatic translation import
-
-   * packages/apps/Aperture
-066ea34 Automatic translation import
-
-   * packages/apps/AudioFX
-02916e7 Automatic translation import
-
-   * packages/apps/Camelot
-23242a1 Automatic translation import
-
-   * packages/apps/Catapult
-c114091 Automatic translation import
-
-   * packages/apps/Contacts
-77afb19ff Automatic translation import
-
-   * packages/apps/DeskClock
-3db9ea707 Automatic translation import
-
-   * packages/apps/Etar
-578b82a5 Automatic translation import
-
-   * packages/apps/FMRadio
-7f5188d Automatic translation import
-
-   * packages/apps/FlipFlap
-fe2abce Automatic translation import
-
-   * packages/apps/Glimpse
-d47de86 Automatic translation import
-
-   * packages/apps/Jelly
-3f4c549 Jelly: Include assets
-525b66c Automatic translation import
-
-   * packages/apps/Launcher3
-38a9344878 Launcher3: SwitchPreference -> SwitchPreferenceCompat
-
-   * packages/apps/LineageParts
-ce30ee7 Automatic translation import
-
-   * packages/apps/Messaging
-ff479f4 Automatic translation import
-
-   * packages/apps/Profiles
-7455e65 Automatic translation import
-
-   * packages/apps/Recorder
-8f65896 Automatic translation import
-
-   * packages/apps/Settings
-b722610b9c4 Automatic translation import
-
-   * packages/apps/ThemePicker
-1c8d1e0a Automatic translation import
-
-   * packages/apps/Twelve
-2a9b749 Twelve: Readd round icon attribute
-1e4626b Twelve: Set wake mode to network
-7c4ac24 Twelve: Tie CoilBitmapLoader to service scope
-38aff6a Automatic translation import
-
-   * packages/apps/Updater
-6fafcc4 Automatic translation import
-
-   * packages/providers/DownloadProvider
-be8b0fb7 Automatic translation import
-
-   * packages/resources/devicesettings
-8624d14 Automatic translation import
-
-   * vendor/crowdin
-fef707d Automatic translation import
-
-   * vendor/qcom/opensource/commonsys/fm
-b38a391 Automatic translation import
-
-   * vendor/xiaomi/sm8250-common
-5c13ecb sm8250-common: Guard secure_element and esepowermanager for tablet
-
-====================
-     02-15-2025
-====================
-
-   * art
-a44294a580 Update boot image and system server profiles [M80C35P56S0PP]
-
-   * device/xiaomi/pipa
-5259e14 pipa: Initialize Evolution X
-
-   * device/xiaomi/sm8250-common
-4207690c sm8250-common: update NxpNfc label
-f45e0a5b sm8250-common: Guard useless features for tablet
-
-   * frameworks/base
-cc1dbc3ea5ef SystemUI: Remove split navigation bar layout for sw900dp
-f5420fde96ad ExifInterface: do not spam stacktrace on invalid format
-04611fb8f11f SettingsProvider: aconfig: do not error on missing flag files
-94490780517c Broadcast radio power state changes
-d668ed3440b3 Handle all exceptions when loading artwork bitmap
-a3025960cd9b FingerprintUtils: Migrate old fp config xml to new one on HIDL/AIDL switch
-375e9df5798e SystemUI: VPN tile: Don't ask for user/pw on IKEv2/IPSec PSK and RSA
-80fb47ee9ae4 Update boot image and system server profiles [M80C35P56S0PP]
-
-   * hardware/interfaces
-7d7ac396db Merge 'lineage-22.1' into 15.0
-6d4d419194 cec: Don't spam "Machine is not on the network"
-
-   * hardware/lineage/interfaces
-ed17ff3 libperfmgr: Only throw DisplayIdle errors if we support it
-
-   * lineage-sdk
-ce38f734 lineage-sdk: Add setting for atv two button mute
-
-   * lineage/scripts
-38d1654 reuse_helper: Handle kotlin files
-
-   * packages/apps/Jelly
-68e9e9f Jelly: Handle MediaSession For BackgroundShortcut
-0d0d674 Jelly: Background Shortcuts
-
-   * packages/apps/Launcher3
-0b5d848bb0 Revert "Launcher3: Keep clear-all button from being disabled"
-c3cbf855b0 Launcher3: Improve restart logic
-075d719ddf Revert "Launcher3: Fix race condition when performing settings toggle restart"
-
-   * packages/apps/Twelve
-4edf7e3 Twelve: LocalDataSource: Stop pretending we can have artist thumbnails
-69f3c76 Twelve: BaseMediaItemView: Simplify thumbnail handling
-53ccfe0 Twelve: Navigate safely!
-254cec7 Twelve: Ensure all media items have fallback titles
-8e70bf3 Twelve: LocalDataSource: `/audio/albumart/<album_id>` exists too
-1cd5d90 Twelve: LocalDataSource: Use hidden album art database
-62db55b Twelve: Switch back to vendored material
-33444d7 Twelve: Use a custom BitmapLoader for our service
-
-====================
-     02-14-2025
-====================
-
-   * device/qcom/sepolicy_vndr/legacy-um
-87be962ff sepolicy: NFC: Add support for snxxx AIDL service
-
-   * device/qcom/sepolicy_vndr/sm8450
-54ee7c8f8 sepolicy: NFC: Add support for snxxx AIDL service
-
-   * packages/apps/TvSettings
-d6b23f1f2 TvSettings: Support two button mute
-
-   * packages/apps/Twelve
-472b00e Twelve: SubsonicDataSource: Use media item builders
-8690156 Twelve: Simplify media item to data source and media type querying
-f010219 Twelve: Use `ProviderIdentifier` for all fragment arguments
-59cea6d Twelve: Hide trailing view for local provider
-a7af174 Twelve: Media item builders!
-32ff491 Twelve: Use Album thumbnail as Audio thumbnail
-
-====================
-     02-13-2025
-====================
-
-   * art
-7aabdb7f04 Improve cleanup robustness after adb push failures.
-035d8f4b6a Potential buffer overflow in environment local storage
-
-   * device/google/atv
-66aed86 Revert "atv: sepolicy: public: Pull in hal_client_domain rule"
-7beb6ac atv: sepolicy: public: Pull in hal_client_domain rule
-
-   * frameworks/av
-0eddd14e9d AAudio: fix NotificationClient linkToDeath error
-
-   * frameworks/native
-75d0546f48 Update otapreopt_script to support Async Pre-reboot Dexopt.
-
-   * packages/apps/Twelve
-b5597d7 Twelve: Lowercase cursor column names
-1a2d65a Twelve: Fix double .px in MAX_THUMBNAIL_SIZE
 
