@@ -1,27 +1,67 @@
 ====================
-     02-28-2025
+     03-01-2025
 ====================
 
    * bootable/recovery
-d6e69855 minui: Import graphics_drm fix from QSSI 13
+bb04a6a3 minui: Import graphics_drm fix from QSSI 13
+
+   * device/xiaomi/pipa
+618441b vendorsetup.shの変更
 
    * device/xiaomi/sm8250-common
-617ba37 sm8250-common: remove multiple different specifications for  vendor.nxp.nxpnfc_aidl.INxpNfc/default
-230fce2 sm8250-common: Build libcodec2_hidl_shim
-6205c84 sm8250-common: Add support for Dolby Vision
-7114d19 sm8250-common: Enable camera override format from reserved
-bf0cd30 sm8250-common: Set arch variant to armv8-2a-dotprod
-0ab542b sm8250-common: Target arm v8.2a and A55
-76f655b sm8250-common: display: Disable the property debug.sf.enable_gl_backpressure
-f0af45e sm8250-common: display: Set debug.sf.auto_latch_unsignaled to 0
-d0b702b Revert "sm8250-common: Don't latch unsignal buffers"
-fdbaf46 sm8250-common: Do not force DCI-P3 on adaptive color mode
-a6d5531 sm8250-common: Build broken flags for dolby vision
-75ed9c6 sm8250-common: parts: Update overrideHdrTypes API for U
-a383fa7 sm8250-common: parts: Override HDR types for dolby vision
-e94d51b sm8250-common: Import MiSound Audio Effect
-3a40ae8 sm8250-common: Add support for Dolby Atmos
-4cb0eaf sm8250-common: Restore I/O performance
+dcad398 add OTA
+45bb070 sm8250-common: remove multiple different specifications for  vendor.nxp.nxpnfc_aidl.INxpNfc/default
+d35b1f6 sm8250-common: Build libcodec2_hidl_shim
+9326180 sm8250-common: Add support for Dolby Vision
+
+   * frameworks/base
+c4bf6b47a5dc Fixed screen flickering when launching horizontal apps from vertical apps
+ba3711c56463 Optimize code for performance
+2792fa9ef84d Fix array index out of bounds exception problem.
+9a11ed4454ca Optimize code for performance
+
+   * frameworks/native
+c39c5ca3a6 Fix the issue of screen flashing when adjusting ambient light when playing HDR video.
+
+   * packages/apps/Aperture
+a1618e8 Aperture: Use ViewModel's `onCleared()`
+12c932c Aperture: CameraActivity: Rename `model` to `viewModel`
+3532c3b Aperture: Clarify what's the actual context for `AndroidViewModel`s
+
+   * packages/apps/Dialer
+ec2140562 Dialer: Fix crash on voicemail notifier
+
+   * packages/apps/SimpleSettingsConfig
+e539270 Add support for "first boot" configs
+
+   * packages/apps/crDroidSettings
+6953b7e crdroid: Remove stale string translations
+b363ed7 crdroid: Support breath LED mode
+
+   * toolchain/pgo-profiles
+a11ac84 Refreshed afdo profiles drop from ZP1A.250221.002.A1/A2
+
+   * vendor/lineage
+4d69a953 roomservice.py: use -j2 for repo sync
+
+====================
+     02-28-2025
+====================
+
+   * device/xiaomi/sm8250-common
+bcb52a8 sm8250-common: Enable camera override format from reserved
+6036f0e sm8250-common: Set arch variant to armv8-2a-dotprod
+021e014 sm8250-common: Target arm v8.2a and A55
+7d2118d sm8250-common: display: Disable the property debug.sf.enable_gl_backpressure
+3fa3b93 sm8250-common: display: Set debug.sf.auto_latch_unsignaled to 0
+ebcda11 Revert "sm8250-common: Don't latch unsignal buffers"
+5ecc8de sm8250-common: Do not force DCI-P3 on adaptive color mode
+000fa44 sm8250-common: Build broken flags for dolby vision
+cea9306 sm8250-common: parts: Update overrideHdrTypes API for U
+91dac63 sm8250-common: parts: Override HDR types for dolby vision
+4428b5c sm8250-common: Import MiSound Audio Effect
+4978a39 sm8250-common: Add support for Dolby Atmos
+76f980d sm8250-common: Restore I/O performance
 6be2bca sm8250-common: Move runtime cpuset configuration after post_boot completed
 c51a68b sm8250-common: Set dex2oat thread count and cpuset
 244505c sm8250-common: Do not allow foreground tasks to run on CPU7
@@ -39,8 +79,21 @@ c2286fb sm8250-common: dex2oat: Strip off some debug packages
 972be26 sm8250-common: Compile system services using speed-profile
 6119ce0 sm8250-common: Compile HWUI for performance
 
-   * packages/apps/Updater
-d2535c8 20250221対策
+   * packages/apps/Aperture
+cca046f Aperture: Update edge-to-edge setup
+6b6cddb Aperture: Rework Camera2 CaptureRequest application
+82e69ef Aperture: Address getTapToFocusState() deprecation
+b8c65f3 Aperture: Update CameraX to 1.5.0-alpha06
+
+   * packages/apps/crDroidSettings
+e319dd9 crdroid: Switch to PreferenceFragmentCompat
+
+   * tools/extract-utils
+0239fa3 extract_utils: try to move SaR even if all partitions are there
+c069833 extract_utils: add support extracting Moto PIV images
+
+   * vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+4944205 Revert "Revert "ipacm: Add support for DataWarning limit""
 
    * vendor/xiaomi/sm8250-common
 bbad20a sm8250-common: Build libcodec2_hidl_shim from source
@@ -50,13 +103,6 @@ bbad20a sm8250-common: Build libcodec2_hidl_shim from source
 
 ====================
      02-27-2025
-====================
-
-   * vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
-4944205 Revert "Revert "ipacm: Add support for DataWarning limit""
-
-====================
-     02-26-2025
 ====================
 
    * packages/apps/Aperture
@@ -71,18 +117,34 @@ cfe5d27 Aperture: Update Gradle wrapper to 8.13
 0d1066c Aperture: Move to Gradle catalog and update Gradle templates from Twelve
 e4afda2 Aperture: Reformat code
 
+   * toolchain/pgo-profiles
+d62a698 Refreshed afdo profiles drop from ZP1A.250213.002
+
+====================
+     02-26-2025
+====================
+
+   * hardware/lineage/interfaces
+19de245 aidl: light: Treat keyboard devices as keyboards
+
    * packages/apps/Jelly
 925c0a9 Jelly: Introduce HttpUtils#bitmap()
+
+   * packages/apps/Twelve
+d62490f Twelve: Reduce number of player callbacks
+5dea906 Twelve: Reformat code
 
 ====================
      02-25-2025
 ====================
 
+   * device/xiaomi/pipa
+afb1b23 Updaterのcommit変更
+
    * frameworks/base
 9900ce82b154 Fix nav bar flickering when dialog shows
 
    * hardware/lineage/interfaces
-19de245 aidl: light: Treat keyboard devices as keyboards
 a163b58 aidl: light: Support `charging` LED
 
    * hardware/qcom-caf/sm8450/display
@@ -91,16 +153,9 @@ a163b58 aidl: light: Support `charging` LED
    * packages/apps/Launcher3
 0201835a74 Fix Navbar height issue
 
-   * packages/apps/Twelve
-d62490f Twelve: Reduce number of player callbacks
-5dea906 Twelve: Reformat code
-
 ====================
      02-24-2025
 ====================
-
-   * device/xiaomi/pipa
-afb1b23 Updaterのcommit変更
 
    * frameworks/base
 1cb78b5c4745 SystemUI: Hide QR code scanner tile if not launch activity available
@@ -462,6 +517,9 @@ f418ea4 Updater: Initial adaption for crdroid
 eb44a16 Updater: Change package name to avoid conflict
 03ef3f3 Ship as crDroid based on LOS
 
+   * system/security
+b4c4416f Await boot_completed before allowing GC
+
    * vendor/addons
 41278e25 addons: iconshapes: Remove config_dialogCornerRadius again
 
@@ -585,22 +643,8 @@ e12f0132b5 core: Treat vendor/lineage-priv/* as release-keys
 49cfa4e7f63a Update statusBarState in KeyguardStatusBarViewController
 
    * toolchain/pgo-profiles
-a68936d Remove AFDO profile for libz
+99a9541 Remove AFDO profile for libz
 
    * vendor/certification
 1580b8c certification: update to the latest A16 beta (#6)
-
-====================
-     02-19-2025
-====================
-
-   * packages/apps/Catapult
-fb83201 Catapult: String improvements & fixes
-
-   * packages/apps/Updater
-e92031f !fixup Updater: Allow Updater to handle major upgrades via property
-c9159bf Updater: Allow Updater to handle major upgrades via property
-
-   * vendor/lineage
-3d683b1c apns: Update for ChinaTelecom Macau (CTMO)
 
