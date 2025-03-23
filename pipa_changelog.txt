@@ -1,15 +1,43 @@
 ====================
-     03-22-2025
+     03-23-2025
 ====================
 
    * bootable/recovery
-f3ad8767 minui: Import graphics_drm fix from QSSI 13
+67dee22f minui: Import graphics_drm fix from QSSI 13
+
+   * device/xiaomi/pipa
+1378129 pipa: update blobs from OS2.0.2.0.UMZMIXM
+6b7b918 pipa: overlay: Define brightness float values
+
+   * device/xiaomi/sm8250-common
+4539c4c7 sm8250-common: tetheroffload: Version 1.1
+f681737a sm8250-common: Declare WiFi Aware support to WiFi HAL
+c3606b4b sm8250-common: Move to Xiaomi fingerprint AIDL
+8be8c341 sm8250-common: sepolicy: Remove duplicate snxxx AIDL rules
+
+   * frameworks/base
+81196c99d4aa New Crowdin updates (#1217)
+
+   * packages/apps/Launcher3
+015110bb47 New Crowdin updates (#483)
 
    * packages/apps/Updater
-a9a473a 20250221対策
+b06f355 20250221対策
 
    * packages/apps/crDroidSettings
-facd457 bringup
+73f065f New Crowdin updates (#1229)
+eef9ebf crdroid: Add strings for taskbar settings
+
+   * vendor/xiaomi/pipa
+b046b0c pipa: update blobs from OS2.0.2.0.UMZMIXM
+d5895b4 pipa: sync with tree
+
+   * vendor/xiaomi/sm8250-common
+bcae2a1 sm8250-common: update wfd from pipa OS2.0.2.0.UMZMIXM
+
+====================
+     03-22-2025
+====================
 
    * vendor/certification
 6a95948 certification: update to the latest A16 beta BP22.250221.013
@@ -19,6 +47,7 @@ facd457 bringup
 ====================
 
    * packages/apps/Camelot
+1536f0a Camelot: Execute copying in background and add a result message
 4ba0771 Camelot: Copy data from PDF as well on download
 
 ====================
@@ -74,6 +103,11 @@ c30720d90 sepolicy_vndr: lito: Fix avc denials for wakeup nodes
 666f26dbb DeskClock: Fix NPE when removing a timer
 21ed120ca DeskClock: Fix updating remaining time in timer
 
+   * packages/apps/XiaomiDolby
+d1bb1d9 dolby: Add custom profile
+4245277 dolby: Add icons for dolby profiles
+63f998c dolby: Make bass enhancer available on speakers as well
+
 ====================
      03-15-2025
 ====================
@@ -113,14 +147,4 @@ f95172a Update Chromium Webview arm to 134.0.6998.95
 
    * packages/apps/Seedvault
 fe27fa25 Merge tag '15-5.3' of https://github.com/seedvault-app/seedvault into HEAD
-
-====================
-     03-13-2025
-====================
-
-   * external/chromium-webview/patches
-aa26780 Update Chromium Webview to 134.0.6998.95
-
-   * packages/apps/Messaging
-92493eb Messaging: Replace AOSP illustrations
 
