@@ -1,13 +1,39 @@
 ====================
+     03-30-2025
+====================
+
+   * bootable/recovery
+3612fd79 minui: Import graphics_drm fix from QSSI 13
+
+   * frameworks/base
+a48dfec8c46d New Crowdin updates (#1217)
+4b3540064547 Update Crowdin configuration file
+1889db444c0b WeatherView: Set wind info and humidity on lockscreen disabled by default
+4626aa80cd48 Revert "core: Catch OOB when returning pooled string"
+1043b0cd5e03 SystemUI: Bring back smartspace start paddings to what they were before
+bf16ae3615fc SystemUI: Fix up large clock top margin with pixel-fw
+724a54f9dd9f SystemUI: Fix smartspace layout
+149011fd07d9 SystemUI: Grant additional permissions for smartspace
+c93e842afd93 SystemUI: Implement Reverse-engineered Smartspace
+
+   * packages/apps/Launcher3
+d42176b8ef fixup! Launcher3: Bring back QuickSpace events
+7710bc9dd0 Launcher3: Fix uninstalling apps from recents
+
+   * packages/apps/Updater
+1439d72 20250221対策
+
+   * packages/apps/crDroidSettings
+c754bf8 crdroid: Show restart systemui dialog when toggling weather
+a49a1ca crdroid: Set wind info and humidity on lockscreen disabled by default
+
+====================
      03-29-2025
 ====================
 
    * android
 07cb570 Merge 'lineage-22.2' into 15.0
 0eaaad8 manifest: March 2025 Quarterly Platform Release, part 2
-
-   * bootable/recovery
-493a2be9 minui: Import graphics_drm fix from QSSI 13
 
    * build/make
 e9657f365d build: Add backuptool by default
@@ -45,14 +71,6 @@ bb4a8643 sm8250-common: Update to Boot Control HAL v1.2
 bc8f71af sm8250-common: Setup DeviceAsWebcam
 
    * frameworks/base
-e02690e66487 New Crowdin updates (#1217)
-53a722883cec Update Crowdin configuration file
-0bb9f0f18cc7 SystemUI: Fix up large clock top margin with pixel-fw
-58597317f400 SystemUI: Fix smartspace layout
-47e6e87048c8 SystemUI: Grant additional permissions for smartspace
-0ac0b828ff15 SystemUI: Adapt Smartspace A15-QPR1
-9502588c757e SystemUI: smartspace: Adapt for 14 QPR2
-a0e80e121034 SystemUI: Implement Reverse-engineered Smartspace
 365503ca895b camera2: StreamConfigurationMap: add another constructor for MIUI camera on A15 QPR2
 1fd9a8dc2d40 SystemUI: Disable edge gesture if navbar is disabled
 18001526b194 SystemUI: Fix face unlock indication static calls
@@ -1110,7 +1128,21 @@ bceb7bb8e8 Launcher3: Add moto camera to workspace
 a76c1b6f7a Launcher3: Override QuickSearchBox
 ce6ff9fdc9 Launcher3: Use adaptive icon
 
+   * packages/apps/LineageParts
+e920bae Disable unused components
+824c193 Remove unused Network Traffic fragment
+7670976 Use ListPreference for charging control fragment
+7fa5535 Update color mode preview from Android 12
+ca899b7 Utilities: Fix inaccess Build.DATE
+8d4e6ec Kill redundant search fun party
+015f36e Make trust interface less boring
+38ae380 Add initial crDroid stats support
+9d285e6 stats: Mod version switched to crdroid version
+969e495 Ship as crDroid based on LOS
+82dd54a LineageParts: Remove navbar arrow setting
+
    * packages/apps/Settings
+607f40ae33a Settings: Prompt SystemUI restart on toggling navbar
 18a083d23d8 Settings: Disable navigation modes if navbar is disabled
 6a9e59df34d Settings: Keep page search enabled for legacy navigation customization
 fd12ed5be8b Settings: Do not hide navigation modes
@@ -1313,10 +1345,6 @@ e6c96bf SetupWizard: Add graphic for theme select page
 bd87362 FinishActivity: Also hide Back button
 6d0cc50 FinishActivity: Don't crash if exit animation fails somehow
 3a5b46f FinishActivity: Track state of finish process
-94eec15 SetupWizard: Set FEATURE_KEY_DISABLE too
-
-   * packages/apps/Updater
-d2e1cc2 20250221対策
 
    * packages/apps/XiaomiDolby
 011db0b dolby: Add custom profile
@@ -1325,6 +1353,7 @@ a9cda32 dolby: Make bass enhancer available on speakers as well
 025cfdb dolby: Add launcher icon
 
    * packages/apps/crDroidSettings
+91693c4 crdroid: Add SystemUtils for systemui restart dialog
 1936098 crdroid: Remove unused NAVBAR_STYLES setting
 
    * vendor/lineage
@@ -1645,23 +1674,18 @@ ad42315 compat: Import libcutils-v29
    * hardware/qcom-caf/sm8550/dataipa
 9d4d16b Merge tag 'LA.VENDOR.13.2.0.r1-26600-KAILUA.QSSI16.0' into staging/lineage-22.2_merge-LA.VENDOR.13.2.0.r1-26600-KAILUA.QSSI16.0
 
+   * packages/apps/LineageParts
+b341e18 LineageParts: Handle FEATURE_KEY_DISABLE here
+
    * packages/apps/Settings
 71b30e47728 Settings: Only show gesture navigation if device has a software nav bar
+
+   * packages/apps/SetupWizard
+94eec15 SetupWizard: Set FEATURE_KEY_DISABLE too
 
    * packages/apps/Twelve
 39066c8 Twelve: Update deps for QPR2
 9340e79 Twelve: Update gradle-generateBp to 1.22
-
-   * packages/apps/Updater
-f6eaf7d New translations (#84)
-7ff74c9 Update Crowdin configuration file
-190f9ea Catch exceptions when enabling performance mode
-fb706e5 Revert "Updater: layout: activity_updates: add spacing.."
-58edf7e Updater: Update parsed info whenever data is refreshed
-8d9188d Updater: Add support links and some more info
-a5bd98f Updater: Use headline font for activity header
-e0bc38f Updater: Nuke Lineage's website on installation blocked dialog
-becc430 Updater: Initial adaption for crdroid
 
 ====================
      03-27-2025
@@ -1747,6 +1771,17 @@ bf7cabbd57e Settings: Add option to scramble pin layout when unlocking (1/2).
 01e4669 SetupWizard: Cleanup imports
 81353f6 SetupWizard: Remove 2 button nav leftovers
 
+   * packages/apps/Updater
+f6eaf7d New translations (#84)
+7ff74c9 Update Crowdin configuration file
+190f9ea Catch exceptions when enabling performance mode
+fb706e5 Revert "Updater: layout: activity_updates: add spacing.."
+58edf7e Updater: Update parsed info whenever data is refreshed
+8d9188d Updater: Add support links and some more info
+a5bd98f Updater: Use headline font for activity header
+e0bc38f Updater: Nuke Lineage's website on installation blocked dialog
+becc430 Updater: Initial adaption for crdroid
+
    * packages/apps/WallpaperPicker2
 e7bf611b WallpaperPicker2: Remove the use of smaller images for thumbnails
 578cddd5 Changed empty flow to flow of empty list
@@ -1768,9 +1803,6 @@ b5fc696 lmkd: fallback to reading procfs stats when failing to read cgroup stats
 ====================
      03-26-2025
 ====================
-
-   * frameworks/libs/systemui
-a35ed38 iconloaderlib: Update themed icons color palette
 
 ====================
      03-25-2025
@@ -1814,6 +1846,9 @@ b265acec7b Audiopolicy : skipDelays in registerPolicyMixes
 b04f089bec Nuplayer: remove CHECKs in updateVideoSize
 8ad803752f Nuplayer: Handle get input/output format errors cleanly
 71349d3611 Fix Integer Overflow in WebmWriter
+
+   * frameworks/libs/systemui
+a35ed38 iconloaderlib: Update themed icons color palette
 
    * frameworks/native
 fbc8b7b59d Fix the issue of screen flashing when adjusting ambient light when playing HDR video.
@@ -1870,18 +1905,6 @@ e12a5b2b Do not prevent boot on database downgrade
 2d8d3c8c Kill trust interface hint on first boot
 bb005731 Disable by livedisplay by default
 c3e34b61 Ship as crDroid based on LOS
-
-   * packages/apps/LineageParts
-e8214ca Disable unused components
-185cf66 Remove unused Network Traffic fragment
-4a2978d Use ListPreference for charging control fragment
-e8c4d54 Update color mode preview from Android 12
-abfedb6 Utilities: Fix inaccess Build.DATE
-7e46d47 Kill redundant search fun party
-1ffd8cf Make trust interface less boring
-7f5fa2b Add initial crDroid stats support
-56674b9 stats: Mod version switched to crdroid version
-6fc2c41 Ship as crDroid based on LOS
 
    * packages/apps/Settings
 3de05220d84 Settings: Allow devices to provide remote gesture preferences
@@ -2157,9 +2180,6 @@ c943a5b55d fixup! av: support per-app volume [1/3]
 f95688ac6c av: support per-app volume [1/3]
 e39bb6f1de audio: Check MODIFY_AUDIO_ROUTING permission for per-app volume
 
-   * frameworks/libs/systemui
-6b22743 iconloaderlib: Do not wrap themed icons
-
    * packages/services/Telecomm
 d1e86b26d Add back increasing ring feature (1/2).
 dcfc8827d Telecomm: More improvements for incall vibrations
@@ -2221,6 +2241,7 @@ ed565bead soong: Always return release-keys
 15b65bd0d Revert "Remove timestamp from local build number"
 
    * frameworks/libs/systemui
+6b22743 iconloaderlib: Do not wrap themed icons
 fd9c897 iconloaderlib: Use icon provider instance for BaseIconCache
 01f741a Override IconProvider class for IconPack support
 d14ad9d Add support for overriding of IconProvider
@@ -2236,34 +2257,6 @@ ad82a9b iconloaderlib: Add config hint to bypass adaptive icon wrapping
 1536f0a Camelot: Execute copying in background and add a result message
 4ba0771 Camelot: Copy data from PDF as well on download
 
-   * packages/apps/Jelly
-232d6cb Jelly: MainActivity#onCreate(): remove redundant intent var declaration
-5ec9925 Jelly: Always use a temporary WebView to new page URL
-f837220 Jelly: Prevent appBarLayout visibility onHideCustomView if the page is a fullscreen pwa
-
    * vendor/addons
 f6dbb079 addons: Remove gestural navigation overlays
-
-====================
-     03-20-2025
-====================
-
-   * device/google/contexthub
-60fe6008 contexthub: sensorhal: convert to Android.bp
-78cc9f7b contexthub: remove lefty service leftovers
-
-   * device/qcom/sepolicy_vndr/legacy-um
-006e4a4c2 sepolicy: holi: Label additional power supply wakeup nodes
-
-   * hardware/qcom-caf/msm8996/display
-92dc6b713d sdm: conditionally add pixel_formats to DisplayConfigVariableInfo
-9ba061aabd display: inherit display_defaults when using display_headers
-
-   * packages/apps/LineageParts
-01934c3 LineageParts: Get rid of toggleTaskBarDependencies()
-c5c6435 LineageParts: Remove 2 button nav leftovers
-
-   * vendor/lineage
-1241611c kernel: Use libc sysroot from host for 6.11+
-3aed3019 aconfig: Enable minimize button and running apps for desktop windowing mode
 
